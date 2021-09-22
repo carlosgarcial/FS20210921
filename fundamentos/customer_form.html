@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forumlario Cliente</title>
+</head>
+<body>
+    
+    <form action="" align="left" method="GET">
+        <fieldset>
+            <legend>Formulario del cliente:</legend>
+            <img src="adduser.png" align="left" width="300" height="300">
+            <label for="customer_id">Id_Customer:</label>
+            <input required type="text" id="customer_id" name="customerid"><br><br>
+            <label for="store_id">Id_Store:</label>
+            <input type="text" id="store_id" name="storeid"><br><br>
+            <label for="fname">Nombre:</label>
+            <input required type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Apellidos:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="mail"><br><br>
+            <label for="edad">Selecciona su edad:</label>
+            <input type="radio" id="menor" name="edad" value="m18">
+            <label for="18">Menor de 18</label>
+            <input type="radio" id="mayor" name="edad" value="18-65">
+            <label for="18-65">Entre 18 y 65</label>
+            <input type="radio" id="mayor65" name="edad" value="mm65">
+            <label for="65">Mayor de 65</label><br><br>
+            <label for="cumpleaños">Cumpleaños</label>
+            <input type="date" id="cumpleaños" name="bday"><br><br>
+            <label for="descripcion">Descripción</label>
+            <textarea id="txtarea" name="txtarea" rows="2" cols="25"></textarea>
+    
+            <br><br>
+            <input  type="submit" value="Enviar">
+            <input  type="reset" value="Borrar">
+        </fieldset>
+    </form>
+</body>
+</html>
