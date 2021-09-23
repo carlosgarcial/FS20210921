@@ -4,27 +4,50 @@
     color: var(--error-color, red);
 }
 
-nav{
-    background-color: wheat;
-}
-
-.h_flex_container{
-    display: flex;
+.navflexcontainer{
+    background-color: lightgreen;
+    display:flex;
     flex-direction: row;
     text-align: center;
-}
-.logo{
-    background-color: white;
-    width: 500px;
-    height: 200px;
+    flex-wrap: wrap;
 }
 
-.flex_item_1{
+nav a{
+    padding: 15px;
+    border: red;
+    border-style: dashed;
+    flex: auto;
+}
+
+.hflexcontainer{
+    display: flex;
+    background-color: wheat;
+    flex-direction: row;
     text-align: center;
+    font-size: 19px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.flexitem-left{
+    padding: 10px;
+    flex: 50%;
+    width:100px;
+    height: 100px;
+
+}
+.flexitem-right{
+    text-align: center;
+    padding: 10px;
     flex: 50%;
 }
-.flex_item_2{
-    text-align: center;
-    flex: 50%;
+
+figcaption{
+    font-size: small;
+}
+
+@media(max-width:800px){
+    .hflexcontainer{
+        flex-direction: column;
+    }
 }
 
