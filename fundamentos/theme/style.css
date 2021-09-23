@@ -45,6 +45,11 @@ figcaption{
     font-size: small;
 }
 
+.form_style{
+    margin-left:350px;
+    margin-right: 350px;
+}
+
 @media(max-width:800px){
     .hflexcontainer{
         flex-direction: column;

@@ -5,40 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./theme/style.css">
-    <title>Forumlario Cliente</title>
+    <title>Formulario Cliente</title>
 </head>
 <body>
-    
-    <form action="" align="left" method="GET">
-        <fieldset>
-            <legend>Formulario del cliente:</legend>
-            <img src="./images/adduser.png" align="left" width="300" height="300">
-            <label for="customer_id">Id_Customer:</label>
-            <input required type="text" id="customer_id" name="customerid"><br><br>
-            <label for="store_id">Id_Store:</label>
-            <input type="text" id="store_id" name="storeid"><br><br>
-            <label for="fname">Nombre:</label>
-            <input required type="text" id="fname" name="fname"><br><br>
-            <label for="lname">Apellidos:</label>
-            <input type="text" id="lname" name="lname"><br><br>
-            <label for="mail">Email:</label>
-            <input type="email" id="mail" name="mail"><br><br>
-            <label for="edad">Selecciona su edad:</label>
-            <input type="radio" id="menor" name="edad" value="m18">
-            <label for="18">Menor de 18</label>
-            <input type="radio" id="mayor" name="edad" value="18-65">
-            <label for="18-65">Entre 18 y 65</label>
-            <input type="radio" id="mayor65" name="edad" value="mm65">
-            <label for="65">Mayor de 65</label><br><br>
-            <label for="cumpleaños">Fecha de nacimiento:</label>
-            <input type="date" id="cumpleaños" name="bday"><br><br>
-            <label for="descripcion">Descripción</label>
-            <textarea id="txtarea" name="txtarea" rows="2" cols="25"></textarea>
-    
-            <br><br>
-            <input  type="submit" value="Enviar">
-            <input  type="reset" value="Borrar">
-        </fieldset>
-    </form>
+    <div class="form_style">
+        <form action="" align="center" method="GET">
+            <fieldset>
+                <legend>Formulario del cliente:</legend>
+                <!--<img src="./images/adduser.png" align="left" width="300" height="300">-->
+                <label for="customer_id">ID Cliente:</label>
+                <input required type="number" id="customer_id" name="customerid"><br><br>
+                <label for="store_id">ID Tienda:</label>
+                <select id="store" name="store">
+                    <option default value="default">Seleccione una tienda</option>
+                    <option value="t1">Tienda 1</option>
+                    <option value="t2">tienda 2</option>
+                    <option value="t3">Tienda 3</option>
+                    <option value="t4">Tienda 4</option>
+                  </select>
+                <br><br>
+                <label for="fname">Nombre:</label>
+                <input required type="text" id="fname" name="fname"><br><br>
+                <label for="lname">Apellidos:</label>
+                <input type="text" id="lname" name="lname"><br><br>
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="mail"><br><br>
+                <label for="genero">Selecciona su género favorito:</label>
+                <input type="radio" id="misterio" name="genero" value="misterio">
+                <label for="misterio">Misterio</label>
+                <input type="radio" id="romance" name="genero" value="romance">
+                <label for="romance">Romance</label>
+                <input type="radio" id="aventura" name="genero" value="aventura">
+                <label for="aventura">Aventura</label><br><br>
+                <label for="fnac">Fecha de nacimiento:</label>
+                <input type="date" id="fnac" name="fnac"><br><br>
+                <label for="descripcion">Descripción</label>
+                <textarea id="txtarea" name="txtarea" rows="2" cols="25"></textarea>
+        
+                <br><br>
+                <input  type="submit" value="Enviar">
+                <input  type="reset" value="Borrar">
+            </fieldset>
+        </form>
+    </div>
 </body>
 </html>
