@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página principal</title>
-</head>
-<body>
-    <header>
-        <img align="left" src="mysql.png" width="80" height="80">
-        <h1 align="center">Base de datos de ejemplo Sakila</h1>
-    </header>
-    <br><br><br><br>
-    <hr>
-    <nav align="center">
-        <a href="index.html#que">¿Qué es?</a>
-        <a href="index.html#tabla">Tablas</a>
-        <a href="customer_form.html">Clientes</a>
-    </nav>      
-    <hr>
-    <section>
-        <h3 id="que">¿Qué es Sakila?</h3> <br>    
-        Sakila es una base de datos de muestra desarrollada por Mike Hillyer, 
-        ex miembro de la documentación de MySQL AB,proporciona un esquema estándar 
-        que puede usarse para ejemplos en libros, tutoriales, artículos, muestras, etc. 
-        La base de datos también permite ver características de MySQL como vistas, 
-        Procedimientos almacenados y Disparadores.
-    </section>
-    <section>
-        <h3 id="tabla">Tablas</h3> <br>
-        <p>La base de datos Sakila cuenta con diferentes tablas.</p>
-        <img src="sakila.png" width="1200" height="800">
-
-    </section>    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Página principal</title>
+    </head>
+    <body class="pag_principal">
+        <header>
+            <div class="hflex_container">
+                <!--<div class="logo"><img src="./images/mysql.png"></div>-->
+                <div class="flex_item_1">Prueba</div>
+                <div class="flex_item_2">Base de datos de ejemplo Sakila</div>
+            </div>
+        </header>
+        <nav>
+            <a href="index.html#Sakila">Sakila</a>
+            <a href="index.html#tabla">Tablas</a>
+            <a href="customer_form.html">Formulario Clientes</a>
+        </nav>      
+        <hr>
+        <main>
+            <section>
+                <h3 id="Sakila">¿Qué es Sakila?</h3> <br>
+                <summary>
+                    Sakila es una base de datos de muestra desarrollada por Mike Hillyer, 
+                    ex miembro de la documentación de MySQL AB,proporciona un esquema estándar 
+                    que puede usarse para ejemplos en libros, tutoriales, artículos, muestras, etc. 
+                    La base de datos también permite ver características de MySQL como vistas, 
+                    Procedimientos almacenados y Disparadores.
+                </summary>   
+            </section>
+            <section>
+                <h3 id="tabla">Tablas</h3> <br>
+                <p>La base de datos Sakila cuenta con diferentes tablas.</p>
+                <picture>
+                    <img src="./images/sakila.png">
+                </picture>
+                <figcaption>Tablas de la bd Sakila</figcaption>
+            </section> 
+        </main>    
+    </body>
 </html>
