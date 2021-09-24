@@ -8,42 +8,41 @@
         <title>Página principal</title>
     </head>
     <body>
-        <header>
-            <div class="hflexcontainer">
-                <div class="flexitem-left">
-                   <img height="100px" width="150px" src="./images/mysql.png">
-                </div>
-                <div class="flexitem-right"><h1>Sakila: Base de datos de ejemplo</h1></div>
-                <div><label for="user">Usuario:</label>
-                    <input required type="text" id="user" name="user"><br>
-                    <label for="pass">Contraseña:</label>
-                    <input type="password" id="pass" name="pass"><br><br>
-                    <input  type="submit" value="Iniciar sesión">
-                </div>
+        <header class="header_flexcontainer">
+            <div class="flexitem_logo">
+               <img height="100px" width="150px" src="./images/mysql.png">
+            </div>
+            <div class="flexitem-login"><h1>Sakila: Base de datos de ejemplo</h1></div>
+            <div>
+                <label for="user">Usuario:</label>
+                <input required type="text" id="user" name="user"><br>
+                <label for="pass">Contraseña:</label>
+                <input type="password" id="pass" name="pass"><br><br>
+                <input  type="submit" value="Iniciar sesión">
             </div>
         </header>
         <nav class="navflexcontainer">
             <a href="index.html#Sakila">Sakila</a>
             <a href="index.html#tabla">Tablas</a>
             <a href="customer_form.html" target="_blank">Formulario Clientes</a>
-            <a href="#">Galeria</a>
+            <a href="index.html#galeria">Galeria</a>
         </nav>     
-        <main>
-            <section>
-                <h3 id="Sakila">¿Qué es Sakila?</h3> <br>
+        <main class="main_container">
+            <section class="info_flex">
+                <h2 id="Sakila">¿Qué es Sakila?</h2> <br>
                 <summary>
                     Sakila es una base de datos de muestra desarrollada por Mike Hillyer, 
                     ex miembro de la documentación de MySQL AB,proporciona un esquema estándar 
                     que puede usarse para ejemplos en libros, tutoriales, artículos, muestras, etc. 
-                    La base de datos también permite ver características de MySQL como vistas, 
+                    La base de datos también permite ver características de <b>MySQL</b> como vistas, 
                     Procedimientos almacenados y Disparadores.
                 </summary> 
                 <ul>
                     <li>Mas información en: <a href="https://dev.mysql.com/doc/sakila/en/">https://dev.mysql.com/doc/sakila/en/</a></li>
                 </ul>  
             </section>
-            <section>
-                <h3 id="tabla">Tablas</h3> <br>
+            <section class="tabla_flex">
+                <h2 id="tabla">Tablas</h2>
                 <p>La base de datos Sakila cuenta con diferentes tablas.</p>
                 <ul>
                     <li>Clientes</li>
@@ -52,10 +51,24 @@
                     <li>Vistas</li>
                 </ul>
                 <picture>
-                    <img height="600px" width="1200px" src="./images/sakila.png">
+                    <img class="tablas" src="./images/sakila.png">
                 </picture>
-                <figcaption>Tablas de la bd Sakila</figcaption>
+            </section>
+            <section class="galeria_container">
+                <h3 id="galeria">Galeria imágenes</h3>
+                <img class="basic" src="./images/mysql.png" alt="MySQL" width="300" height="300">
+                <img class="blur" src="./images/mysql.png" alt="MySQL" width="300" height="300">
+                <img class="brightness" src="./images/mysql.png" alt="MySQL" width="300" height="300">
+                <img class="contrast" src="./images/mysql.png" alt="MySQL" width="300" height="300">
+                <img class="grayscale" src="./images/mysql.png" alt="MySQL" width="300" height="300">
+                <img class="huerotate" src="./images/mysql.png" alt="MySQL" width="300" height="300">
+                <img class="invert" src="./images/mysql.png" alt="MySQL" width="300" height="300">
+                <img class="opacity" src="./images/mysql.png" alt="MySQL" width="300" height="300">
+                <img class="saturate" src="./images/mysql.png" alt="MySQL" width="300" height="300">
+                <img class="sepia" src="./images/mysql.png" alt="MySQL" width="300" height="300">
+                <img class="shadow" src="./images/mysql.png" alt="MySQL" width="300" height="300">
             </section> 
-        </main>   
+        </main> 
+        <footer align="center"><b>Autor:</b> Carlos García Loro</footer>  
     </body>
 </html>

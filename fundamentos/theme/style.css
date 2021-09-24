@@ -19,7 +19,7 @@ nav a{
     flex: auto;
 }
 
-.hflexcontainer{
+.header_flexcontainer{
     display: flex;
     background-color: wheat;
     flex-direction: row;
@@ -28,30 +28,117 @@ nav a{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.flexitem-left{
+.flexitem_logo{
     padding: 10px;
-    flex: 50%;
+    flex: 30%;
     width:100px;
     height: 100px;
 
 }
-.flexitem-right{
+.flexitem-login{
     text-align: center;
     padding: 10px;
-    flex: 50%;
+    flex: 70%;
+    margin-bottom: 50px;
+}
+
+.main_container{
+    display: flex;
+    background-color:lightcyan;
+    flex-direction: column;
+}
+
+.info_flex{
+    padding: 10px;
+    flex: 30%;
+}
+
+.tabla_flex{
+    padding: 10px;
+    flex: 30%;
+}
+
+.galeria_container{
+    padding: 10px;
+    flex: 30%;
 }
 
 figcaption{
     font-size: small;
 }
 
+p{
+    text-transform: uppercase;
+}
+
+.tablas{
+    border-radius: 10%  ;
+    max-width: 100% ;
+    height: auto ;
+    /*transition: transform .2s;*/ 
+}
+
+/*.tablas:hover {
+    transform: scale(3); 
+}*/
+
+h2{
+    color: darkolivegreen;
+}
+
+img{
+    width: 33%;
+    height: auto;
+    float: left; 
+    max-width: 235px;
+}
+
+.blur {filter: blur(4px);}
+.brightness {filter: brightness(250%);}
+.contrast {filter: contrast(180%);}
+.grayscale {filter: grayscale(100%);}
+.huerotate {filter: hue-rotate(180deg);}
+.invert {filter: invert(100%);}
+.opacity {filter: opacity(50%);}
+.saturate {filter: saturate(7);}
+.sepia {filter: sepia(100%);}
+.shadow {filter: drop-shadow(8px 8px 10px green);}
+
 .form_style{
     margin-left:350px;
     margin-right: 350px;
+    background-color: lightgreen;
+}
+
+.flex_container{
+    display: flex;
+    background-color:lightcyan;
+    flex-direction: column;
+}
+
+.header_cont{
+    padding: 10px;
+    flex: 30%;
+}
+.nav_cont{
+    background-color: lightgreen;
+    display:flex;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.main_cont{
+    padding: 10px;
+    flex: 30%;
+}
+
+footer{
+    background-color: lightgreen;
+    padding: 10px;
 }
 
 @media(max-width:800px){
-    .hflexcontainer{
+    .header_flexcontainer{
         flex-direction: column;
     }
 }
