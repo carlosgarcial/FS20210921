@@ -9,10 +9,9 @@
 </head>
 <body bgcolor="lightskyblue">
     <div class="form_style">
-        <form action="" align="center" method="GET">
+        <form action="" align="left" method="GET">
             <fieldset>
-                <legend>Formulario del cliente:</legend>
-                <!--<img src="./images/adduser.png" align="left" width="300" height="300">-->
+                <h1>Formulario para clientes:</h1>
                 <label for="customer_id">ID Cliente:</label>
                 <input required type="number" id="customer_id" name="customerid"><br><br>
                 <label for="store_id">ID Tienda:</label>
@@ -22,7 +21,7 @@
                     <option value="t2">tienda 2</option>
                     <option value="t3">Tienda 3</option>
                     <option value="t4">Tienda 4</option>
-                  </select>
+                </select>
                 <br><br>
                 <label for="fname">Nombre:</label>
                 <input required type="text" id="fname" name="fname"><br><br>
@@ -39,8 +38,9 @@
                 <label for="aventura">Aventura</label><br><br>
                 <label for="fnac">Fecha de nacimiento:</label>
                 <input type="date" id="fnac" name="fnac"><br><br>
-                <label for="descripcion">Descripción</label>
-                <textarea id="txtarea" name="txtarea" rows="2" cols="25"></textarea>
+                <label for="descripcion">Descripción:</label>
+                <br>
+                <textarea id="txtarea" name="txtarea" rows="10" cols="50"></textarea>
                 <br><br>
                 <input  type="submit" value="Enviar">
                 <input  type="reset" value="Borrar">

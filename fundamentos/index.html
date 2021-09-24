@@ -8,12 +8,10 @@
         <title>Página principal</title>
     </head>
     <body>
-        <header class="header_flexcontainer">
-            <div class="flexitem_logo">
-               <img height="100px" width="150px" src="./images/mysql.png">
-            </div>
-            <div class="flexitem-titulo"><h1>Sakila: Base de datos de ejemplo</h1></div>
-            <div class="flexitem-login">
+        <header class="cabezera-principal">
+            <img id="logo" src="./images/mysql.png">
+            <div class="cabezera-principal__titulo"><h1>Sakila: Base de datos de ejemplo</h1></div>
+            <div class="cabezera-principal__login">
                 <label for="user">Usuario:</label>
                 <input required type="text" id="user" name="user"><br>
                 <label for="pass">Contraseña:</label>
@@ -21,14 +19,14 @@
                 <input  type="submit" value="Iniciar sesión">
             </div>
         </header>
-        <nav class="navflexcontainer">
+        <nav class="menu">
             <a href="index.html#Sakila">Sakila</a>
             <a href="index.html#tabla">Tablas</a>
             <a href="customer_form.html" target="_blank">Formulario Clientes</a>
             <a href="index.html#galeria">Galeria</a>
         </nav>     
-        <main class="main_container">
-            <section class="info_flex">
+        <main class="principal">
+            <section class="principal__informacion">
                 <h2 id="Sakila">¿Qué es Sakila?</h2> <br>
                 <summary>
                     Sakila es una base de datos de muestra desarrollada por Mike Hillyer, 
@@ -41,7 +39,7 @@
                     <li>Mas información en: <a href="https://dev.mysql.com/doc/sakila/en/">https://dev.mysql.com/doc/sakila/en/</a></li>
                 </ul>  
             </section>
-            <section class="tabla_flex">
+            <section class="principal__tabla">
                 <h2 id="tabla">Tablas</h2>
                 <p>La base de datos Sakila cuenta con diferentes tablas.</p>
                 <ul>
@@ -50,12 +48,10 @@
                     <li>Gestiones</li>
                     <li>Vistas</li>
                 </ul>
-                <picture>
-                    <img class="tablas" src="./images/sakila.png">
-                </picture>
+                <img id="tablas" src="./images/sakila.png">
             </section>
-            <section class="galeria_container">
-                <h3 id="galeria">Galeria imágenes</h3>
+            <section class="principal__galeria">
+                <h2 id="galeria">Galeria imágenes</h2>
                 <img class="basic" src="./images/mysql.png" alt="MySQL" width="300" height="300">
                 <img class="blur" src="./images/mysql.png" alt="MySQL" width="300" height="300">
                 <img class="brightness" src="./images/mysql.png" alt="MySQL" width="300" height="300">
