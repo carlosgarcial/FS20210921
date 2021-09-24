@@ -31,15 +31,17 @@ nav a{
 .flexitem_logo{
     padding: 10px;
     flex: 30%;
-    width:100px;
-    height: 100px;
 
 }
-.flexitem-login{
+.flexitem-titulo{
     text-align: center;
     padding: 10px;
-    flex: 70%;
-    margin-bottom: 50px;
+    flex: 30%;
+}
+.flexitem-login{
+    text-align: right;
+    padding: 10px;
+    flex: 30%;
 }
 
 .main_container{
@@ -135,6 +137,12 @@ img{
 footer{
     background-color: lightgreen;
     padding: 10px;
+}
+
+@media print {
+    footer,.flexitem-login, .navflexcontainer{
+        display: none;
+    }
 }
 
 @media(max-width:800px){
