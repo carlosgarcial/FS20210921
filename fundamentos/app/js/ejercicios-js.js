@@ -2,13 +2,11 @@
 function ejer1(min, max) { 
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
-  
-  const rndint = ejer1(1, 50)
-  console.log(rndint)
+
+  console.log(ejer1(1, 50))
 
 //Ejercicio 2
 function ejer2(min, max) { 
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
-  const advint = ejer2(1, 6)
-  console.log(advint)
+  console.log(ejer2(1, 6))
