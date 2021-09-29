@@ -5,13 +5,35 @@ function generarRND(min, max) {
 }
 
 //Ejercicio 2
-function ejer2() {
+function ejer2(nrondas, num) {
+  return num, nrondas;
+ 
+}
+
+function adivinajuegoalt(num,nrondas){
+  let juego = new Object();
+  juego.num = prompt("Introduce un numero: ");
+  juego.nrondas = 1;
+  juego.rndnum = Math.floor(Math.random() * 100) + 1;
+  juego.adivinanum = () => {
+    for(let i= 1; i <=10; i++){
+      if (juego.rndnum == num) {
+        console.log("Los numeros son iguales!!! Has ganado!!!!");
+      } else if (juego.rndnum > num) {
+        console.log("El numero generado aleatoriamente es mayor.");
+      } else if (juego.rndnum < num) {
+        console.log("El numero generado aleatoriamente es menor");
+      }
+
+      nrondas = nrondas+1;
+    }
+  }
 
 }
 
-function adivinajuego() {
+/*function adivinajuego() {
   let rndnum = Math.floor(Math.random() * 100) + 1;
-  for (let i = 0; i < 11; i++) {
+  for (let i = 0; i <= 10; i++) {
     let num = prompt("Introduce un numero: ");
     if (rndnum == num) {
       alert("Los numeros son iguales!!! Has ganado!!!!");
@@ -23,7 +45,9 @@ function adivinajuego() {
       alert("El numero generado aleatoriamente es menor");
     }
   }
-}
+}*/
+
+
 
 //Ejercicio 3
 function ejer3(){
