@@ -1,12 +1,15 @@
 //Ejercicio 1
-function ejer1(min, max) { 
+function generarRND(min, max) { 
     let rndnum = Math.floor(Math.random() * (max - min + 1) + min)
     alert("El numero aleatorio es: " + rndnum);
   }
 
 
 //Ejercicio 2
-function ejer2() { 
+function ejer2(){
+
+}
+function adivinajuego() { 
     let rndnum = Math.floor(Math.random() * 100) + 1;
     for(let i=0; i < 11; i++){
       let num = prompt("Introduce un numero: ");
@@ -22,13 +25,16 @@ function ejer2() {
   }
 
   //Ejercicio 3
-function ejer3(num1, num2){
+function rellenarArray(num1, num2){
   let arr = new Array(num1);
   
 }
 
 //Ejercicio 4
 function ejer4(){
+
+}
+function generarPrimos(){
   let count = 0;
   for(let i = 1; i < 100; i++){
     for(let j = 1; j <= i; j++){
@@ -46,6 +52,10 @@ function ejer4(){
 
 //Ejercicio 5
 function ejer5(dni){
+  
+}
+
+function validarDNI(dni){
   let num, letr, letra, exp_reg_dni
 
   exp_reg_dni = /^\d{8}[A-Z]$/;
