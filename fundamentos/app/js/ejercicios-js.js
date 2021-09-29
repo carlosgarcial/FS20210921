@@ -69,13 +69,17 @@ function ejer5(dni){
 //Ejercicio 6
 function ejer6(str){
   const strRevertido = str.split("").reverse().join("")
+  return strRevertido === str;
+}
+
+function generarpalindromo(str){
+  const strRevertido = str.split("").reverse().join("")
 
   if(strRevertido === str){
     alert(str + " es palindromo.")
   }else{
     alert(str + " no es palindromo")
   }
-  return strRevertido === str;
 }
 
 
