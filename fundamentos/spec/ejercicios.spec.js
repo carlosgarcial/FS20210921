@@ -1,7 +1,23 @@
 describe('Datos de las pruebas', function() {
-    xdescribe('ejer6',() => {
+
+    xdescribe('ejer5',() => {
+        it('dniOK', () => {
+            let caso = '23467838E';
+
+            expect(ejer5(caso)).toBeTrue()
+        })
+
+
+        it('dniNo', () => {
+            let caso = '234677838E';
+
+            expect(ejer5(caso)).toBeFalse() 
+        })
+    })
+
+    describe('ejer6',() => {
         it('palinOK', () => {
-            let caso = 'La ruta nos aporto otro paso natural';
+            let caso = 'ana';
 
             expect(ejer6(caso)).toBeTrue()
         })
@@ -11,11 +27,6 @@ describe('Datos de las pruebas', function() {
 
             expect(ejer6(caso)).toBeFalse();
         })
-        
-    })
-
-    describe('ejer5',() => {
-       
         
     })
     

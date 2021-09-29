@@ -5,7 +5,10 @@ function generarRND(min, max) {
 }
 
 //Ejercicio 2
-function ejer2() {}
+function ejer2() {
+
+}
+
 function adivinajuego() {
   let rndnum = Math.floor(Math.random() * 100) + 1;
   for (let i = 0; i < 11; i++) {
@@ -23,9 +26,13 @@ function adivinajuego() {
 }
 
 //Ejercicio 3
+function ejer3(){
+
+}
+
 function rellenarArray(tamaño, numero) {
   let arr = new Array();
-  for(let i = 1; i <= tamaño; i++){
+  for(let i = 0; i <= tamaño; i++){
     arr.push(numero);
   }
   console.log(arr);
@@ -33,7 +40,10 @@ function rellenarArray(tamaño, numero) {
 }
 
 //Ejercicio 4
-function ejer4() {}
+function ejer4() {
+
+}
+
 function generarPrimos() {
   let count = 0;
   for (let i = 1; i < 100; i++) {
@@ -43,14 +53,16 @@ function generarPrimos() {
       }
     }
     if (count == 2) {
-      alert(i + " ");
+      console.log(i + " ");
     }
     count = 0;
   }
 }
 
 //Ejercicio 5
-function ejer5(dni) {}
+function ejer5(dni) {
+  
+}
 
 function validarDNI(dni) {
   let num, letr, letra, exp_reg_dni;
