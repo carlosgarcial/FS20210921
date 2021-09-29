@@ -75,6 +75,9 @@ function ejer6(str){
   }else{
     alert(str + " no es palindromo")
   }
+  return strRevertido === str;
 }
+
+
   
   
