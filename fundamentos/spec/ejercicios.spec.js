@@ -1,5 +1,5 @@
 describe('Datos de las pruebas', function() {
-    describe('ejer6',() => {
+    xdescribe('ejer6',() => {
         it('palinOK', () => {
             let caso = 'La ruta nos aporto otro paso natural';
 
