@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" ="text/css" href="./theme/calculadorastyle.css"/>
+    <link rel="stylesheet" href="./theme/calculadorastyle.css"/> 
     <title>Calculadora</title>
 </head>
 <body bgcolor="grey">
     <div class="calculadora">
         <form action="#" name="calculadora" id="calculadora">
-            <input type="textfield" id="textoPantalla">
+            <input type="textfield" readonly="readonly" id="textoPantalla">
             <p>
             <button id="btn_borrar_ultimo_digito" class="borrar_opc"> Retr</button>
             <button id="btn_borrar_todo" class="borrar_opc">C</button>
@@ -84,13 +84,17 @@
             })
             
 
-            btn_borrar_ultimo_digito = () =>{
-               
-            }
+            
+            /*btn_borrar_ultimo_digito.addEventListener('click',ev =>{
+               calcu.borrar_digito(ev.target.textContent);
+               textoPantalla.value = calcu.pantalla;
+            })*/
+            
 
-            btn_borrar_todo = () =>{
-               
-            }
+            btn_borrar_todo.addEventListener('click',ev =>{
+               calcu.borrar_todo(ev.target.textContent);
+               textoPantalla.value = calcu.pantalla;
+            })
         })()
     </script>
 </body>

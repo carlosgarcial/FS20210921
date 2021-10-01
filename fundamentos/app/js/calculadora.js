@@ -52,13 +52,13 @@ class Calculadora{
     }
 
     borrar_digito(){
-        if(this.acum !== '0'){
-            this.acum == '0';
-        }
+        
     }
 
     borrar_todo(){
-
+        this.pantalla = ' ';
+        this.acum = 0;
+        this.resultado = false;
     }
 
 }
