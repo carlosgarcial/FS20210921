@@ -35,8 +35,8 @@
             <button id="btn_sumar" class="operadores">+</button>
             </p>
             <p>
-            <button id="btn_cero" class="numeros">0</button> 
             <button id="btn_cambiar_signo">+/-</button> 
+            <button id="btn_cero" class="numeros">0</button> 
             <button id="btn_decimales">.</button> 
             <button id="btn_igual" class="operadores">=</button> 
             </p>
@@ -49,23 +49,8 @@
             let textoPantalla = document.querySelector('#textoPantalla')
             let btn_borrar_ultimo_digito = document.querySelector('#btn_borrar_ultimo_digito')
             let btn_borrar_todo = document.querySelector('#btn_borrar_todo')
-            let btn_dividir = document.querySelector('#btn_dividir')
-            let btn_7 = document.querySelector('#btn_7')
-            let btn_8 = document.querySelector('#btn_8')
-            let btn_9 = document.querySelector('#btn_9')
-            let btn_multiplicar = document.querySelector('#btn_multiplicar')
-            let btn_4 = document.querySelector('#btn_4')
-            let btn_5 = document.querySelector('#btn_5')
-            let btn_6 = document.querySelector('#btn_6')
-            let btn_restar = document.querySelector('#btn_restar')
-            let btn_1 = document.querySelector('#btn_1')
-            let btn_2 = document.querySelector('#btn_2')
-            let btn_3 = document.querySelector('#btn_3')
-            let btn_igual = document.querySelector('#btn_igual')
-            let btn_0 = document.querySelector('#btn_0')
             let btn_cambiar_signo = document.querySelector('#btn_cambiar_signo')
             let btn_decimales = document.querySelector('#btn_decimales')
-            let btn_sumar = document.querySelector('#btn_sumar')
 
             let calcu = new Calculadora();
 
@@ -83,18 +68,26 @@
                 }) 
             })
             
-
-            
-            /*btn_borrar_ultimo_digito.addEventListener('click',ev =>{
+            btn_borrar_ultimo_digito.addEventListener('click',ev =>{
                calcu.borrar_digito(ev.target.textContent);
                textoPantalla.value = calcu.pantalla;
-            })*/
+            })
             
-
             btn_borrar_todo.addEventListener('click',ev =>{
                calcu.borrar_todo(ev.target.textContent);
                textoPantalla.value = calcu.pantalla;
             })
+
+            btn_cambiar_signo.addEventListener('click',ev =>{
+               calcu.cambiar_signo(ev.target.textContent);
+               textoPantalla.value = calcu.pantalla;
+            })
+
+            btn_decimales.addEventListener('click',ev =>{
+               calcu.poner_coma(ev.target.textContent);
+               textoPantalla.value = calcu.pantalla;
+            })
+
         })()
     </script>
 </body>
