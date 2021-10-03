@@ -7,45 +7,83 @@
     <link rel="stylesheet" href="./theme/style.css">
     <title>Formulario Cliente</title>
 </head>
-<body bgcolor="lightskyblue">
-    <div class="form_style">
-        <form action="" align="left" method="GET">
-            <fieldset>
-                <h1>Formulario para clientes:</h1>
+<body>
+    <header class="cabezera-principal">
+        <img id="logo" src="./images/mysql.png" alt="Logo de MySQL">
+        <div class="cabezera-principal__titulo"><h1>Sakila: Base de datos de ejemplo</h1></div>
+        <div class="cabezera-principal__login">
+            <label for="user">Usuario:</label>
+            <input required type="text" id="user" name="user" placeholder="Usuario"><br>
+            <label for="pass">Contraseña:</label>
+            <input type="password" id="pass" name="pass" placeholder="Contraseña"><br><br>
+            <input  type="submit" value="Iniciar sesión">
+            <input  type="submit" value="Iniciar sesión">
+        </div>
+    </header>
+    <nav class="menu">
+        <a href="index.html#Sakila">Sakila</a>
+        <a href="index.html#tabla">Tablas</a>
+        <a href="customer_form.html" target="_blank">Formulario Clientes</a>
+        <a href="index.html#galeria">Galeria</a>
+    </nav> 
+    <main>
+        <form action="#" method="GET">
+            <div>
                 <label for="customer_id">ID Cliente:</label>
                 <input required type="number" id="customer_id" name="customerid"><br><br>
+            </div>
+            <div>
                 <label for="store_id">ID Tienda:</label>
                 <select id="store" name="store">
                     <option default value="default">Seleccione una tienda</option>
                     <option value="t1">Tienda 1</option>
-                    <option value="t2">tienda 2</option>
+                    <option value="t2">Tienda 2</option>
                     <option value="t3">Tienda 3</option>
                     <option value="t4">Tienda 4</option>
                 </select>
                 <br><br>
+            </div>
+            <div>
                 <label for="fname">Nombre:</label>
-                <input required type="text" id="fname" name="fname"><br><br>
+                <input required type="text" id="fname" name="fname" placeholder="Nombre"><br><br>
+            </div>
+            <div>
                 <label for="lname">Apellidos:</label>
-                <input type="text" id="lname" name="lname"><br><br>
-                <label for="mail">Email:</label>
-                <input type="email" id="mail" name="mail"><br><br>
-                <label for="genero">Selecciona su género favorito:</label>
+                <input type="text" id="lname" name="lname" placeholder="Apellidos"><br><br>
+            </div>
+            <div>
+                <label for="mail">Correo electrónico:</label>
+                <input type="email" id="mail" name="mail" placeholder="Correo electrónico"><br><br>
+            </div>
+            <div>
+                <label for="genero">Seleccione su género favorito:</label>
                 <input type="radio" id="misterio" name="genero" value="misterio">
                 <label for="misterio">Misterio</label>
                 <input type="radio" id="romance" name="genero" value="romance">
                 <label for="romance">Romance</label>
                 <input type="radio" id="aventura" name="genero" value="aventura">
-                <label for="aventura">Aventura</label><br><br>
+                <label for="aventura">Aventura</label>
+                <input type="radio" id="otro" name="genero" value="otro">
+                <label for="otro">Otro</label>
+                <input type="text" id="otroD" name="otroD" placeholder="Indique su género favorito"><br><br>
+            </div>
+            <div>
+                <label for="premiun">Cliente Premiun:</label>
+                <input type="checkbox" id="premiun" name="premiun" value="true"><br><br>
+            </div>
+            <div>
                 <label for="fnac">Fecha de nacimiento:</label>
-                <input type="date" id="fnac" name="fnac"><br><br>
-                <label for="descripcion">Descripción:</label>
-                <br>
-                <textarea id="txtarea" name="txtarea" rows="10" cols="50"></textarea>
-                <br><br>
+                <input type="date" id="fnac" name="fnac"><br><br><br><br>
+            </div>
+            <div>
                 <input  type="submit" value="Enviar">
                 <input  type="reset" value="Borrar">
-            </fieldset>
+            </div>
+            <br><br>
         </form>
-    </div>
+    </main>
+    <footer>
+        &copy; 2021 Todos los derechos reservados | Autor: <b>Carlos García Loro</b>
+    </footer>  
 </body>
 </html>

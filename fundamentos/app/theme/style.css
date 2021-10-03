@@ -14,26 +14,27 @@ body{
     display: flex;
     background-color: lightskyblue;
     flex-direction: row;
-    text-align: center;
-    font-size: 19px;
+    text-align: right;
     font-family: 'Courier New', Courier, monospace;
 }
 
 .cabezera-principal__logo, #logo{
     padding: 10px;
-    flex:30%;
+    flex:20%;
     border-radius: 20%;
     max-width: 120px;
 
 }
 .cabezera-principal__titulo{
     padding: 10px;
-    flex:30%;
+    flex:50%;
+    font-size: 12px;
 }
 .cabezera-principal__login{
     text-align: right;
     padding: 10px;
     flex:30%;
+    font-size: 19px;
 }
 
 .menu{
@@ -45,11 +46,10 @@ body{
 }
 
 .menu a{
-    padding: 15px;
-    border: red;
+    padding: 10px;
     border-style: solid;
     flex: auto;
-    font-size: 30px;
+    font-size: 15px;
     font-family: monospace;
 }
 
@@ -107,17 +107,16 @@ img{
 .sepia {filter: sepia(100%);}
 .shadow {filter: drop-shadow(8px 8px 10px green);}
 
-.form_style{
-    margin-left:350px;
-    margin-right: 350px;
-    background-color: lightgreen;
+form{
+    margin: 25.5px; 
 }
 
-.flex_container{
-    display: flex;
-    background-color:lightcyan;
-    flex-direction: column;
+
+
+form  label{
+    font-weight:bold;
 }
+
 
 .header_cont{
     padding: 10px;
