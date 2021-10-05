@@ -1,0 +1,19 @@
+/*aspectos generales: bordes y color de fondo de calculadora*/
+.calculadora { margin-left: 500px; margin-right: 500px; border: 3px blue ridge; width: 250px;text-align: center;
+  background-color: #f6f8d8; }
+
+/*pantalla de visualización: bordes, posición, color de fondo, estilo letra.*/
+#textoPantalla { width: 200px; height: 50px; border: 2px black solid; text-align: right;
+    position: relative;  padding: 0px 5px; margin-left: 10px; margin-right: 10px; margin-top: 5px;
+    background-color: white; font-family: "courier new";
+    overflow: hidden;}
+
+/*botones normales: anchura y margen*/
+.calculadora .numeros { width: 50px; height: 50px; padding: 0; color: black; background-color: lightskyblue;}
+
+.calculadora .operadores { width: 50px; height: 50px; padding: 0; color: black; background-color: lightgreen;}
+
+.calculadora #btn_cambiar_signo, #btn_decimales { width: 50px; height: 50px; padding: 0; color: black; background-color: lightgoldenrodyellow;}
+
+/*botones especiales*/
+.calculadora .borrar_opc { color: white; width: 75px; height: 50px; padding: 0px; background-color: lightcoral; }

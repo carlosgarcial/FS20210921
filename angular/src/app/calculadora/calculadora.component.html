@@ -1,0 +1,31 @@
+<p>
+  <input type="text"[(ngModel)]="pantalla">
+</p>
+<p>
+  <input type="button" value="Borr"(click)="borrar_digito()">
+  <input type="button" value="C"(click)="borrar_todo()">
+  <input type="button" value="/"(click)="calcular('/')">
+</p>
+<p>
+  <input type="button" value="7"(click)="ponerdigito('7')">
+  <input type="button" value="8"(click)="ponerdigito('8')">
+  <input type="button" value="9"(click)="ponerdigito('9')">
+  <input type="button" value="*"(click)="calcular('*')">
+</p>
+<p>
+  <input type="button" value="4"(click)="ponerdigito('4')">
+  <input type="button" value="5"(click)="ponerdigito('5')">
+  <input type="button" value="6"(click)="ponerdigito('6')">
+  <input type="button" value="-"(click)="calcular('-')">
+</p>
+  <input type="button" value="3"(click)="ponerdigito('3')">
+  <input type="button" value="2"(click)="ponerdigito('2')">
+  <input type="button" value="1"(click)="ponerdigito('1')">
+  <input type="button" value="+"(click)="calcular('+')">
+<p>
+  <input type="button" value="+/-"(click)="cambiar_signo()">
+  <input type="button" value="0"(click)="ponerdigito('0')">
+  <input type="button" value="."(click)="poner_coma()">
+  <input type="button" value="="(click)="calcular('=')">
+</p>
+
