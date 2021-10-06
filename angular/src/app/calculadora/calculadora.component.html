@@ -1,31 +1,34 @@
-<p>
-  <input type="text"[(ngModel)]="pantalla">
-</p>
-<p>
-  <input type="button" value="Borr"(click)="borrar_digito()">
-  <input type="button" value="C"(click)="borrar_todo()">
-  <input type="button" value="/"(click)="calcular('/')">
-</p>
-<p>
-  <input type="button" value="7"(click)="ponerdigito('7')">
-  <input type="button" value="8"(click)="ponerdigito('8')">
-  <input type="button" value="9"(click)="ponerdigito('9')">
-  <input type="button" value="*"(click)="calcular('*')">
-</p>
-<p>
-  <input type="button" value="4"(click)="ponerdigito('4')">
-  <input type="button" value="5"(click)="ponerdigito('5')">
-  <input type="button" value="6"(click)="ponerdigito('6')">
-  <input type="button" value="-"(click)="calcular('-')">
-</p>
-  <input type="button" value="3"(click)="ponerdigito('3')">
-  <input type="button" value="2"(click)="ponerdigito('2')">
-  <input type="button" value="1"(click)="ponerdigito('1')">
-  <input type="button" value="+"(click)="calcular('+')">
-<p>
-  <input type="button" value="+/-"(click)="cambiar_signo()">
-  <input type="button" value="0"(click)="ponerdigito('0')">
-  <input type="button" value="."(click)="poner_coma()">
-  <input type="button" value="="(click)="calcular('=')">
-</p>
+<div class="calculadora">
+  <p>
+    <input id="textoPantalla" type="text"[(ngModel)]="pantalla">
+  </p>
+  <p>
+    <input class="borrar_opc" type="button" value="Borr"(click)="borrar_digito()">
+    <input class="borrar_opc" type="button" value="C"(click)="borrar_todo()">
+    <input class="operadores" type="button" value="/"(click)="calcular('/')">
+  </p>
+  <p>
+    <input class="numeros" type="button" value="7"(click)="ponerdigito('7')">
+    <input class="numeros" type="button" value="8"(click)="ponerdigito('8')">
+    <input class="numeros" type="button" value="9"(click)="ponerdigito('9')">
+    <input class="operadores" type="button" value="*"(click)="calcular('*')">
+  </p>
+  <p>
+    <input class="numeros" type="button" value="4"(click)="ponerdigito('4')">
+    <input class="numeros" type="button" value="5"(click)="ponerdigito('5')">
+    <input class="numeros" type="button" value="6"(click)="ponerdigito('6')">
+    <input class="operadores" type="button" value="-"(click)="calcular('-')">
+  </p>
+    <input class="numeros" type="button" value="3"(click)="ponerdigito('3')">
+    <input class="numeros" type="button" value="2"(click)="ponerdigito('2')">
+    <input class="numeros" type="button" value="1"(click)="ponerdigito('1')">
+    <input class="operadores" type="button" value="+"(click)="calcular('+')">
+  <p>
+    <input id="btn_cambiar_signo" type="button" value="+/-"(click)="cambiar_signo()">
+    <input class="numeros" type="button" value="0"(click)="ponerdigito('0')">
+    <input id="btn_decimales" type="button" value="."(click)="poner_coma()">
+    <input class="operadores" type="button" value="="(click)="calcular('=')">
+  </p>
+</div>
+
 
