@@ -25,40 +25,6 @@ describe('CalculadoraComponent', () => {
 });
 
 describe('Calculadora',()=>{
-  describe('Operaciones_basicas',()=>{
-      it('suma', ()=>{
-          let a = 2, b = 2;
-          let resul;
-
-          resul = suma(a , b)
-          expect(resul).toBe(4)
-      })
-
-      it('resta', ()=>{
-          let a = 6, b = 3;
-          let resul;
-
-          resul = resta(a , b)
-          expect(resul).toBe(3)
-      })
-
-      it('multiplica', ()=>{
-          let a = 2, b = 5;
-          let resul;
-
-          resul = multiplica(a , b)
-          expect(resul).toBe(10)
-      })
-
-      it('divide', ()=>{
-          let a = 20, b = 4;
-          let resul;
-
-          resul = divide(a , b)
-          expect(resul).toBe(5)
-      })
-  })
-
   describe('Calculos',()=>{
       it('poner_digito', () => {
           let c = new CalculadoraComponent();

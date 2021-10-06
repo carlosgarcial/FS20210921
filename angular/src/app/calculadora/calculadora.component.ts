@@ -18,7 +18,7 @@ export class CalculadoraComponent implements OnInit {
     this.resultado = true;
   }
 
-  ponerdigito(num:string) {
+  ponerdigito(num:string):void {
     if(this.pantalla == '0' || this.resultado){
         this.pantalla = num;
         this.resultado = false;
@@ -27,7 +27,7 @@ export class CalculadoraComponent implements OnInit {
     }
   }
 
-  calcular(operador:string){
+  calcular(operador:string):void{
     let valor = parseFloat(this.pantalla);
     switch(this.op){
         case '+': this.acum += valor;
@@ -45,7 +45,7 @@ export class CalculadoraComponent implements OnInit {
     this.pantalla = this.acum.toString();
   }
 
-borrar_digito(){
+borrar_digito():void{
   if (this.resultado || this.pantalla.length == 1 || (this.pantalla.length == 2 && this.pantalla.startsWith('-'))) {
     this.pantalla = '0';
     this.resultado = true;
@@ -54,19 +54,19 @@ borrar_digito(){
     this.pantalla.length - 1);
 }
 
-borrar_todo(){
+borrar_todo():void{
   this.acum = 0;
   this.op = '+';
   this.pantalla = '0';
   this.resultado = true;
 }
 
-cambiar_signo(){
+cambiar_signo():void{
   this.pantalla = (-this.pantalla).toString();
   this.acum = (-this.acum);
 }
 
-poner_coma(){
+poner_coma():void{
   if (this.resultado) {
       this.pantalla = '0.';
       this.resultado = false;
