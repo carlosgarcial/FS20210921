@@ -7,23 +7,28 @@ import { DemosComponent } from './demos/demos.component';
 import { FormsModule } from '@angular/forms';
 import { DinamicoComponent } from './dinamico/dinamico.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
-import { MyCoreModule } from 'src/lib/my-core';
+import { ERROR_LEVEL, LoggerHTTPService, LoggerService, MyCoreModule } from 'src/lib/my-core';
 import { MainModule } from './main';
-import { CommonModule } from '@angular/common';
+import { CommonServicesModule } from './common-services';
 import { SecurityModule } from './security';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
     AppComponent,
     DemosComponent,
     DinamicoComponent,
-    CalculadoraComponent
+    CalculadoraComponent,
   ],
   imports: [
     BrowserModule, FormsModule,
-    AppRoutingModule, MyCoreModule, MainModule, CommonModule,SecurityModule
+    AppRoutingModule, MyCoreModule, MainModule, CommonServicesModule, SecurityModule,
   ],
-  providers: [],
+  providers: [
+    LoggerService,
+    // { provide: LoggerService, useClass: LoggerHTTPService },
+    { provide: ERROR_LEVEL, useValue: environment.ERROR_LEVEL },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
