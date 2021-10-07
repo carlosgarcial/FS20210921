@@ -1,0 +1,54 @@
+<form #ClienteForm="ngForm">
+  <div>
+    <label for="id">Código:</label>
+    <input type="number" id="id" name="id" [(ngModel)]="vm.Elemento.id" #id="ngModel" required min="0" >
+  </div>
+  <div>
+    <label for="tienda">Tienda:</label>
+    <input type="number" id="tienda" name="tienda" [(ngModel)]="vm.Elemento.tienda" #tienda="ngModel" required min="0" >
+  </div>
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="vm.Elemento.nombre" #nombre="ngModel"
+      required minlength="2" maxlength="10" >
+  </div>
+  <div>
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" [(ngModel)]="vm.Elemento.apellidos" #apellidos="ngModel"
+      minlength="2" maxlength="10" >
+  </div>
+  <div>
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" name="correo" [(ngModel)]="vm.Elemento.correo" #correo="ngModel"
+      maxlength="100" email >
+  </div>
+  <div>
+    <label for="direccion">Direccion:</label>
+    <input type="text" id="direccion" name="direccion" [(ngModel)]="vm.Elemento.direccion" #direccion="ngModel"
+      minlength="2" maxlength="30" >
+  </div>
+  <div>
+    <label for="activo">Activo:</label>
+    <input type="checkbox" id="activo" name="activo" [(ngModel)]="vm.Elemento.activo" #activo="ngModel" value="true" checked>
+  </div>
+  <div>
+    <label for="fecha_creacion">Fecha Creación:</label>
+    <input type="date" id="fecha_creacion" name="fecha_creacion" [(ngModel)]="vm.Elemento.fecha_creacion" #fecha_creacion="ngModel">
+  </div>
+  <div>
+    <label for="fecha_ultima_modificacion">Última modificacion:</label>
+    <input type="date" id="fecha_ultima_modificacion" name="fecha_ultima_modificacion" [(ngModel)]="vm.Elemento.fecha_ultima_modificacion" #fecha_ultima_modificacion="ngModel">
+  </div>
+  <div>
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" [(ngModel)]="vm.Elemento.edad" #edad="ngModel"
+      min="16" max="67">
+  </div>
+  <div>
+    <label for="dni">DNI:</label>
+    <input type="text" id="dni" name="dni" [(ngModel)]="vm.Elemento.dni" #dni="ngModel" >
+  </div>
+  <div>
+    <app-form-buttons (send)="vm.send()" (cancel)="vm.cancel()"></app-form-buttons>
+  </div>
+</form>

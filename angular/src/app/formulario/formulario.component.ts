@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { NotificationService, NotificationType } from '../common-services';
-import { NotificationComponent } from '../main/notification/notification.component';
+
 
 export interface Persona{
   id: number | null;
