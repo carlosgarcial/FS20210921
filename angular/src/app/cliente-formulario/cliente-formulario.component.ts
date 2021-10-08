@@ -35,6 +35,7 @@ export class ClienteViewModel {
     this.notify.add((this.IsAdd ? 'Nuevos: ' : 'Modificados: ') + JSON.stringify(this.Elemento), NotificationType.info)
   }
 
+
 }
 @Component({
   selector: 'app-cliente-formulario',
@@ -43,6 +44,11 @@ export class ClienteViewModel {
 })
 
 export class ClienteFormularioComponent implements OnInit {
+
+  errorObligacion: string = 'Este campo es obligatorio.';
+  errorCorreo: string = 'Este correo no cumple con el formato válido.';
+  errorMinMax: string = 'Debe tener entre 16 y 67 años.';
+  errorfecha: string = 'El formato de fecha no es válido.';
 
   constructor(public vm: ClienteViewModel) { }
 

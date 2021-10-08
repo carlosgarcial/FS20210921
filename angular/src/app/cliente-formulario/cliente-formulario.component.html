@@ -2,6 +2,8 @@
   <div>
     <label for="id">Código:</label>
     <input type="number" id="id" name="id" [(ngModel)]="vm.Elemento.id" #id="ngModel" required min="0" >
+    <app-show-errors-messages [message_error]="errorObligacion"></app-show-errors-messages>
+    <output class="error" [hidden]="!id.hasError('required') || ClienteForm.pristine"></output>
   </div>
   <div>
     <label for="tienda">Tienda:</label>
@@ -52,3 +54,13 @@
     <app-form-buttons (send)="vm.send()" (cancel)="vm.cancel()"></app-form-buttons>
   </div>
 </form>
+
+<!-- <div>
+  <output class="error" [hidden]="!id.hasError('required') || miForm.pristine">Es obligatorio. </output>
+  <output class="error" [hidden]="!nombre.errors?.required">Es obligatorio. </output>
+  <output class="error" [hidden]="!nombre.errors?.minlength && !nombre.errors?.maxlength">Debe tener entre 2 y 10 letras. </output>
+  <output class="error" [hidden]="!apellidos.errors?.minlength && !apellidos.errors?.maxlength">Debe tener entre 2 y 10 letras. </output>
+  <output class="error" [hidden]="!correo.errors?.email">No es un correo electrónico valido. </output>
+  <output class="error" [hidden]="!edad.errors?.min">Debe tener al menos {{edad.errors?.min?.min}} años. </output>
+  <output class="error" [hidden]="!edad.errors?.max">Debe tener {{edad.errors?.max?.max}} años como máximo. </output>
+</div> -->

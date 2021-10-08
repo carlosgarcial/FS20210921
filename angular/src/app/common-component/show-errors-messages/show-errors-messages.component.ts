@@ -9,9 +9,7 @@ export class ShowErrorsMessagesComponent implements OnInit {
 
   constructor() { }
 
-  @Input() idRequerido(){
-
-  }
+  @Input() message_error: string= '';
 
   ngOnInit(): void {
   }
