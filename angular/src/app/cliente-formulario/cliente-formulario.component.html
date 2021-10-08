@@ -1,66 +1,74 @@
 <form #ClienteForm="ngForm">
   <div>
-    <label for="id">Código:</label>
-    <input type="number" id="id" name="id" [(ngModel)]="vm.Elemento.id" #id="ngModel" required min="0" >
-    <app-show-errors-messages [message_error]="errorObligacion"></app-show-errors-messages>
-    <output class="error" [hidden]="!id.hasError('required') || ClienteForm.pristine"></output>
+    <label for="customer_id">Código</label>
+    <input type="number" [class.is-invalid]="customer_id.invalid" id="customer_id"
+      name="customer_id" [(ngModel)]="vm.Elemento.customer_id" #customer_id="ngModel" placeholder="Código del usuario"
+      required>
+    <app-show-errors-messages [errors]="customer_id.errors"></app-show-errors-messages>
   </div>
   <div>
-    <label for="tienda">Tienda:</label>
-    <input type="number" id="tienda" name="tienda" [(ngModel)]="vm.Elemento.tienda" #tienda="ngModel" required min="0" >
+    <label for="store_id">Tienda</label>
+    <select id="store_id" name="store_id" [(ngModel)]="vm.Elemento.store_id" #store_id="ngModel">
+      <option value="1">Tienda 1</option>
+      <option value="2">Tienda 2</option>
+    </select>
   </div>
   <div>
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" [(ngModel)]="vm.Elemento.nombre" #nombre="ngModel"
-      required minlength="2" maxlength="10" >
+    <label for="first_name">Nombre</label>
+    <input type="text" [class.is-invalid]="first_name.invalid" id="first_name" name="first_name"
+        [(ngModel)]="vm.Elemento.first_name" #first_name="ngModel" required minlength="2" maxlength="50">
+    <app-show-errors-messages [errors]="first_name.errors"></app-show-errors-messages>
   </div>
   <div>
-    <label for="apellidos">Apellidos:</label>
-    <input type="text" id="apellidos" name="apellidos" [(ngModel)]="vm.Elemento.apellidos" #apellidos="ngModel"
-      minlength="2" maxlength="10" >
+    <label for="last_name">Apellidos</label>
+    <input type="text" [class.is-invalid]="last_name.invalid" id="last_name" name="last_name"
+      [(ngModel)]="vm.Elemento.last_name" #last_name="ngModel" minlength="2" maxlength="50">
+    <app-show-errors-messages [errors]="last_name.errors"></app-show-errors-messages>
   </div>
   <div>
-    <label for="correo">Correo:</label>
-    <input type="email" id="correo" name="correo" [(ngModel)]="vm.Elemento.correo" #correo="ngModel"
-      maxlength="100" email >
+    <label for="email">Correo</label>
+    <input type="email" [class.is-invalid]="email.invalid" id="email" name="email"
+      [(ngModel)]="vm.Elemento.email" #email="ngModel" placeholder="Correo electrónico" required email minlength="3">
+    <app-show-errors-messages [errors]="email.errors"></app-show-errors-messages>
   </div>
   <div>
-    <label for="direccion">Direccion:</label>
-    <input type="text" id="direccion" name="direccion" [(ngModel)]="vm.Elemento.direccion" #direccion="ngModel"
-      minlength="2" maxlength="30" >
+    <fieldset>
+      <legend for="address_id">Dirección</legend>
+        <input type="radio" id="address_id1" name="address_id"
+          [(ngModel)]="vm.Elemento.address_id" checked value="1">
+        <label for="address_id1">Casa</label>
+        <input type="radio" id="address_id2" name="address_id"
+          [(ngModel)]="vm.Elemento.address_id" checked value="2">
+        <label for="address_id2">Trabajo</label>
+    </fieldset>
   </div>
   <div>
-    <label for="activo">Activo:</label>
-    <input type="checkbox" id="activo" name="activo" [(ngModel)]="vm.Elemento.activo" #activo="ngModel" value="true" checked>
+    <label for="create_date">F. Creación</label>
+    <input type="date" [class.is-invalid]="create_date.invalid" id="create_date"
+      name="create_date" [(ngModel)]="vm.Elemento.create_date" #create_date="ngModel">
+    <app-show-errors-messages [errors]="create_date.errors"></app-show-errors-messages>
   </div>
   <div>
-    <label for="fecha_creacion">Fecha Creación:</label>
-    <input type="date" id="fecha_creacion" name="fecha_creacion" [(ngModel)]="vm.Elemento.fecha_creacion" #fecha_creacion="ngModel">
+    <label for="last_update">Última modificacion</label>
+    <input type="date" [class.is-invalid]="last_update.invalid" id="last_update" name="last_update" [(ngModel)]="vm.Elemento.last_update" #last_update="ngModel" min="2021-11-01">
+    <app-show-errors-messages [errors]="last_update.errors"></app-show-errors-messages>
   </div>
   <div>
-    <label for="fecha_ultima_modificacion">Última modificacion:</label>
-    <input type="date" id="fecha_ultima_modificacion" name="fecha_ultima_modificacion" [(ngModel)]="vm.Elemento.fecha_ultima_modificacion" #fecha_ultima_modificacion="ngModel">
+    <input type="checkbox" id="active" name="active" [(ngModel)]="vm.Elemento.active" value="true" checked>
+    <label for="active">Activo</label>
   </div>
   <div>
     <label for="edad">Edad:</label>
     <input type="number" id="edad" name="edad" [(ngModel)]="vm.Elemento.edad" #edad="ngModel"
       min="16" max="67">
+    <app-show-errors-messages [errors]="edad.errors"></app-show-errors-messages>
   </div>
   <div>
     <label for="dni">DNI:</label>
-    <input type="text" id="dni" name="dni" [(ngModel)]="vm.Elemento.dni" #dni="ngModel" >
+    <input type="text" id="dni" name="dni" [(ngModel)]="vm.Elemento.dni" #dni="ngModel" nif>
+    <app-show-errors-messages [errors]="dni.errors"></app-show-errors-messages>
   </div>
   <div>
-    <app-form-buttons (send)="vm.send()" (cancel)="vm.cancel()"></app-form-buttons>
+    <app-form-buttons (send)="vm.send()" [send-disabled]="ClienteForm.invalid" (cancel)="vm.cancel()" (delete)="vm.delete()"></app-form-buttons>
   </div>
 </form>
-
-<!-- <div>
-  <output class="error" [hidden]="!id.hasError('required') || miForm.pristine">Es obligatorio. </output>
-  <output class="error" [hidden]="!nombre.errors?.required">Es obligatorio. </output>
-  <output class="error" [hidden]="!nombre.errors?.minlength && !nombre.errors?.maxlength">Debe tener entre 2 y 10 letras. </output>
-  <output class="error" [hidden]="!apellidos.errors?.minlength && !apellidos.errors?.maxlength">Debe tener entre 2 y 10 letras. </output>
-  <output class="error" [hidden]="!correo.errors?.email">No es un correo electrónico valido. </output>
-  <output class="error" [hidden]="!edad.errors?.min">Debe tener al menos {{edad.errors?.min?.min}} años. </output>
-  <output class="error" [hidden]="!edad.errors?.max">Debe tener {{edad.errors?.max?.max}} años como máximo. </output>
-</div> -->

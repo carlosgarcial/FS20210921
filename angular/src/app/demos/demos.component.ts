@@ -25,10 +25,10 @@ export class DemosComponent implements OnInit {
   fontSize = 18;
 
   constructor(private log: LoggerService, public vm: NotificationService) {
-    log.error('Es un error');
-    log.warn('Es un warn');
-    log.info('Es un info');
-    log.log('Es un log');
+    // log.error('Es un error');
+    // log.warn('Es un warn');
+    // log.info('Es un info');
+    // log.log('Es un log');
   }
 
   public get Nombre(): string { return this.nombre; }
