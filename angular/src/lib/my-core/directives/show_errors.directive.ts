@@ -1,5 +1,6 @@
 import { Directive, ElementRef, forwardRef, Input } from '@angular/core';
 import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator, ValidatorFn, Validators } from '@angular/forms';
+import validatorjs from 'validator';
 
 export function LowercaseValidation(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
