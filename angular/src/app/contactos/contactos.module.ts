@@ -4,20 +4,20 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MyCoreModule } from 'src/lib/my-core';
 import { CommonServicesModule } from '../common-services';
-import { ContactosComponent, CONTACTOS_COMPONENTES } from './contactos.component';
-
-
-
+import { CONTACTOS_COMPONENTES } from './contactos.component';
+import { CommonComponentModule } from '../common-component/common-component.module';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
-    ContactosComponent, CONTACTOS_COMPONENTES
+    CONTACTOS_COMPONENTES,
   ],
   exports: [
-    ContactosComponent, CONTACTOS_COMPONENTES
+    CONTACTOS_COMPONENTES,
   ],
   imports: [
-    CommonModule, FormsModule, RouterModule.forChild([]), MyCoreModule, CommonServicesModule,
+    CommonModule, FormsModule, RouterModule.forChild([]),
+    MyCoreModule, CommonServicesModule, CommonComponentModule,NgxPaginationModule
   ]
 })
 export class ContactosModule { }

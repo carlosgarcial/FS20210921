@@ -22,6 +22,7 @@ export class ContactosComponent implements OnInit {
   styleUrls: ['./contactos.component.scss'],
 })
 export class ContactosListComponent implements OnInit {
+  public page: number = 0;
   constructor(protected vm: ContactosViewModelService) {}
   public get VM(): ContactosViewModelService {
     return this.vm;

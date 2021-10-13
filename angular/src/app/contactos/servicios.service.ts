@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { LoggerService } from 'src/lib/my-core';
 import { RESTDAOService } from '../base-code/RESTDAOService';
 import { NotificationService } from '../common-services';
+import { ModoCRUD } from '../base-code/typos';
 
-export type ModoCRUD = 'list' | 'add' | 'edit' | 'view' | 'delete';
 
 @Injectable({
   providedIn: 'root',
