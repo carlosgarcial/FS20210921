@@ -1,6 +1,6 @@
 <div class="calculadora">
   <p>
-    <input id="textoPantalla" type="text"[(ngModel)]="pantalla">
+    <input id="textoPantalla" type="text"[(ngModel)]="pantalla" readonly=readonly>
   </p>
   <p>
     <input class="borrar_opc" type="button" value="Borr"(click)="borrar_digito()">
@@ -19,10 +19,12 @@
     <input class="numeros" type="button" value="6"(click)="ponerdigito('6')">
     <input class="operadores" type="button" value="-"(click)="calcular('-')">
   </p>
+  <p>
     <input class="numeros" type="button" value="3"(click)="ponerdigito('3')">
     <input class="numeros" type="button" value="2"(click)="ponerdigito('2')">
     <input class="numeros" type="button" value="1"(click)="ponerdigito('1')">
     <input class="operadores" type="button" value="+"(click)="calcular('+')">
+  </p>
   <p>
     <input id="btn_cambiar_signo" type="button" value="+/-"(click)="cambiar_signo()">
     <input class="numeros" type="button" value="0"(click)="ponerdigito('0')">
