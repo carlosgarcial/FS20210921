@@ -35,7 +35,7 @@
     </div>
     <div class="form-group col-md-4">
       <label class="form-label" for="wiki">Wiki:</label>
-      <input class="form-control" [class.is-invalid]="wiki.invalid" type="text" name="wiki" id="wiki" [(ngModel)]="VM.Elemento.wiki" #wiki="ngModel" required minlength="2" maxlength="50"/>
+      <input class="form-control" [class.is-invalid]="wiki.invalid" type="text" name="wiki" id="wiki" [(ngModel)]="VM.Elemento.wiki" #wiki="ngModel" required minlength="2" maxlength="100"/>
       <output class="invalid-feedback" [myShowErrors]="wiki.errors"></output>
     </div>
   </div>
