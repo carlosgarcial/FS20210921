@@ -16,6 +16,7 @@ import { ClienteFormularioComponent } from './cliente-formulario/cliente-formula
 import { CommonComponentModule } from './common-component/common-component.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactosModule } from './contactos';
+import { LIBROSModule } from './libros';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ContactosModule } from './contactos';
     CommonComponentModule,
     HttpClientModule,
     ContactosModule,
+    LIBROSModule
   ],
   providers: [
     LoggerService,
