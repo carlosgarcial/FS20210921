@@ -1,13 +1,12 @@
 import { TestBed } from '@angular/core/testing';
+import { ContactosViewModelService } from './servicios.service';
 
-import { ServiciosService } from './servicios.service';
-
-describe('ServiciosService', () => {
-  let service: ServiciosService;
+fdescribe('ContactosViewModelService', () => {
+  let service: ContactosViewModelService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ServiciosService);
+    service = TestBed.inject(ContactosViewModelService);
   });
 
   it('should be created', () => {
