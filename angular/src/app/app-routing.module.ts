@@ -5,6 +5,7 @@ import { ContactosAddComponent, ContactosEditComponent, ContactosListComponent, 
 import { DemosComponent } from './demos/demos.component';
 import { LibrosAddComponent, LibrosComponent, LibrosEditComponent, LibrosListComponent, LibrosViewComponent } from './libros/libros.component';
 import { HomeComponent, PageNotFoundComponent } from './main';
+import { RegisterUserComponent } from './security';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -32,6 +33,7 @@ const routes: Routes = [
   ]},
   { path: 'antonie/hasted', redirectTo: '/contactos/27'},
   { path: 'config', loadChildren: () => import('./config/config.module').then(mod => mod.ConfigModule)},
+  { path: 'registro', component: RegisterUserComponent },
   { path: '404.html', component: PageNotFoundComponent },
   { path: '**', component: PageNotFoundComponent },
 
