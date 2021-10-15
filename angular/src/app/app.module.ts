@@ -9,14 +9,15 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { ERROR_LEVEL, LoggerHTTPService, LoggerService, MyCoreModule } from 'src/lib/my-core';
 import { MainModule } from './main';
 import { CommonServicesModule } from './common-services';
-import { SecurityModule } from './security';
+import { AuthInterceptor, SecurityModule } from './security';
 import { environment } from 'src/environments/environment';
 import { FormularioComponent } from './formulario/formulario.component';
 import { ClienteFormularioComponent } from './cliente-formulario/cliente-formulario.component';
 import { CommonComponentModule } from './common-component/common-component.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ContactosModule } from './contactos';
 import { LIBROSModule } from './libros';
+import { AjaxWaitInterceptor } from './main/ajax-wait';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LIBROSModule } from './libros';
     ClienteFormularioComponent,
   ],
   imports: [
-    BrowserModule, FormsModule,
+    BrowserModule,
+    FormsModule,
     AppRoutingModule,
     MyCoreModule,
     MainModule,
@@ -43,6 +45,8 @@ import { LIBROSModule } from './libros';
     LoggerService,
     // { provide: LoggerService, useClass: LoggerHTTPService },
     { provide: ERROR_LEVEL, useValue: environment.ERROR_LEVEL },
+    { provide: HTTP_INTERCEPTORS, useClass: AjaxWaitInterceptor, multi: true, },
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true, },
   ],
   bootstrap: [AppComponent]
 })

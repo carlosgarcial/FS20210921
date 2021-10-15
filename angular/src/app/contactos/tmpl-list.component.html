@@ -3,7 +3,7 @@
     <tr class="table-info">
       <th class="display-4">Lista de contactos</th>
       <th class="text-end">
-        <button class="btn btn-success" routerLink="add"><i class="fas fa-plus"></i> Añadir</button>
+        <button class="btn btn-success" *ngIf="VM.auth.isAutenticated" routerLink="add"><i class="fas fa-plus"></i> Añadir</button>
       </th>
     </tr>
   </thead>
