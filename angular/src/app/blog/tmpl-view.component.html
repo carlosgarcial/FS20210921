@@ -1,0 +1,25 @@
+<h1>Contacto</h1>
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-6">
+    <div class="well well-sm">
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <img src="{{ VM.Elemento.fotourl }}" alt="Foto de {{ VM.Elemento.titulo }}" class="rounded" width="75" height="75"/>
+        </div>
+        <div class="col-sm-6 col-md-8">
+          <h4>
+            {{ VM.Elemento.autor }} {{ VM.Elemento.fecha }}
+          </h4>
+          <p>
+            {{ VM.Elemento.texto }}
+          </p>
+          <i class="fas fa-thumbs-up"></i><b> Me gusta:</b>{{ VM.Elemento.megusta }}
+          <br>
+          <div class="btn-group">
+            <input class="btn btn-secondary" type="button" value="Volver" (click)="VM.cancel()"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

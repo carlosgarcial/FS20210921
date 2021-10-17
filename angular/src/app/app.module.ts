@@ -16,8 +16,9 @@ import { ClienteFormularioComponent } from './cliente-formulario/cliente-formula
 import { CommonComponentModule } from './common-component/common-component.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ContactosModule } from './contactos';
-import { LIBROSModule } from './libros';
+import { LibrosModule } from './libros';
 import { AjaxWaitInterceptor } from './main/ajax-wait';
+import { BlogModule } from './blog';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AjaxWaitInterceptor } from './main/ajax-wait';
     CommonComponentModule,
     HttpClientModule,
     ContactosModule,
-    LIBROSModule
+    LibrosModule,
+    BlogModule
   ],
   providers: [
     LoggerService,
