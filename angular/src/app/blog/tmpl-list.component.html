@@ -1,26 +1,25 @@
 <table class="table table-striped table-hover">
   <thead>
     <tr class="table-info">
-      <th class="display-4">NOVEDADES!!!</th>
+      <th class="display-6">NOVEDADES!!!</th>
       <th class="text-end">
-        <button class="btn btn-success" *ngIf="VM.auth.isAutenticated" routerLink="add"><i class="fas fa-plus"></i> Añadir</button>
+        <button class="btn btn-success" *ngIf="VM.auth.isAutenticated" routerLink="add"><i class="fas fa-plus"></i> Añadir entrada</button>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let item of VM.Listado | paginate: { itemsPerPage: 5, currentPage: page }">
       <td>
-        <div class="container">
+        <div class="container-fluid">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col">
               <img class="rounded-circle float-left" src="{{ item.fotourl }}" alt="Foto de {{ item.titulo }}" width="75" height="75"/>
-            </div>
-            <div class="col-md-10">
               <a class="btn btn-link btn-lg px-0" routerLink="{{item.id}}/{{item.titulo}}-{{item.autor}}">
-                {{item.titulo}}</a>
-                <br><b>Autor:</b> {{item.autor}}<b> Fecha:</b> {{item.fecha}}<b> Me gusta:</b> {{item.megusta}}
+                {{item.titulo}}
+              </a>
+              <br><b>Autor:</b> {{item.autor}}<b> Fecha:</b> {{item.fecha}}<b> Me gusta:</b> {{item.megusta}}
+              {{item.texto}}
             </div>
-            {{item.texto}}
           </div>
         </div>
       </td>
@@ -41,5 +40,4 @@
   </tbody>
 </table>
 <pagination-controls (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente">
-
 </pagination-controls>
