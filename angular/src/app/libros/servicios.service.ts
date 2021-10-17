@@ -5,6 +5,7 @@ import { RESTDAOService } from '../base-code/RESTDAOService';
 import { NotificationService } from '../common-services';
 import { ModoCRUD } from '../base-code/typos';
 import { Router } from '@angular/router';
+import { AuthService, AUTH_REQUIRED } from '../security';
 
 
 @Injectable({
@@ -13,7 +14,7 @@ import { Router } from '@angular/router';
 export class LibrosDAOService extends RESTDAOService<any, any> {
   constructor(http: HttpClient) {
     super(http, 'libros', {
-      //context: new HttpContext().set(AUTH_REQUIRED, true),
+      context: new HttpContext().set(AUTH_REQUIRED, true),
     });
   }
 }
@@ -32,7 +33,8 @@ export class LibrosViewModelService {
     protected notify: NotificationService,
     protected out: LoggerService,
     protected dao: LibrosDAOService,
-    protected router: Router
+    protected router: Router,
+    public auth: AuthService,
   ) {}
   public get Modo(): ModoCRUD {
     return this.modo;

@@ -12,7 +12,6 @@ import { RegisterUserComponent } from './security';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
-  { path: 'inicio', component: HomeComponent },
   { path: 'demos', component: DemosComponent },
   { path: 'calculadora', component: CalculadoraComponent },
   { path: 'contactos', children: [

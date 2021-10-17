@@ -3,7 +3,7 @@
     <tr class="table-info">
       <th class="display-4">Lista de libros</th>
       <th class="text-end">
-        <button class="btn btn-success" routerLink="add"><i class="fas fa-plus"></i> Añadir</button>
+        <button *ngIf="VM.auth.isAutenticated" class="btn btn-success" routerLink="add"><i class="fas fa-plus"></i> Añadir</button>
       </th>
     </tr>
   </thead>
@@ -13,7 +13,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-2">
-              <img class="rounded-circle float-left" src="assets/libro.png" alt="Foto de {{ item.titulo }}" width="75" height="75"/>
+              <img src="assets/libro.png" alt="Foto de {{ item.titulo }}" width="75" height="75"/>
             </div>
             <div class="col-md-10">
               <a class="btn btn-link btn-lg px-0" routerLink="{{item.idLibro}}/{{item.titulo}}-{{item.autor}}">
@@ -26,14 +26,14 @@
         </div>
       </td>
       <td class="align-middle text-end">
-        <div class="btn-group" role="group">
-          <button class="btn btn-info" routerLink="{{item.idLibro}}/{{item.titulo}}-{{item.autor}}">
+        <div class="btn-group"  role="group">
+          <button *ngIf="VM.auth.isAutenticated" class="btn btn-info" routerLink="{{item.idLibro}}/{{item.titulo}}-{{item.autor}}">
             <i class="fas fa-eye"></i>
           </button>
-          <button class="btn btn-success" [routerLink]="[item.idLibro, 'edit']">
+          <button *ngIf="VM.auth.isAutenticated" class="btn btn-success" [routerLink]="[item.idLibro, 'edit']">
             <i class="fas fa-pen"></i>
           </button>
-          <button class="btn btn-danger" (click)="VM.delete(item.idLibro)">
+          <button *ngIf="VM.auth.isAutenticated" class="btn btn-danger" (click)="VM.delete(item.idLibro)">
             <i class="far fa-trash-alt"></i>
           </button>
         </div>

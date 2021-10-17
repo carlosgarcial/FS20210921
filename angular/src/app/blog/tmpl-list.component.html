@@ -26,13 +26,13 @@
       </td>
       <td class="align-middle text-end">
         <div class="btn-group" role="group">
-          <button class="btn btn-info" routerLink="{{item.id}}/{{item.titulo}}-{{item.autor}}">
+          <button *ngIf="VM.auth.isAutenticated" class="btn btn-info" routerLink="{{item.id}}/{{item.titulo}}-{{item.autor}}">
             <i class="fas fa-eye"></i>
           </button>
-          <button class="btn btn-success" [routerLink]="[item.id, 'edit']">
+          <button *ngIf="VM.auth.isAutenticated" class="btn btn-success" [routerLink]="[item.id, 'edit']">
             <i class="fas fa-pen"></i>
           </button>
-          <button class="btn btn-danger" (click)="VM.delete(item.id)">
+          <button *ngIf="VM.auth.isAutenticated" class="btn btn-danger" (click)="VM.delete(item.id)">
             <i class="far fa-trash-alt"></i>
           </button>
         </div>
