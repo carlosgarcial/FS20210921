@@ -51,7 +51,7 @@ class CalculadoraTest {
 		}
 		
 		@Test
-		@DisplayName("Division entera")
+		@DisplayName("Division entera prueba")
 		void testDivideIntInt() {
 			assertEquals(0, calc.divide(1, 2));
 			assertThrows(Exception.class, ()->calc.divide(1, 0));
