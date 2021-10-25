@@ -12,7 +12,6 @@ import org.hibernate.annotations.GenerationTime;
 import org.hibernate.validator.constraints.Length;
 
 import com.example.domains.core.EntityBase;
-import com.example.domains.core.validators.NIF;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
