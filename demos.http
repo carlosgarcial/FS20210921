@@ -103,7 +103,7 @@ Accept: text/xml, application/json
 }
 
 ### 
-GET http://localhost:8010/actores/201
+GET http://localhost:8010/peliculas/1
 
 ###
 put http://localhost:8010/actores/201
@@ -113,4 +113,22 @@ Content-Type: application/json
   "id": 201,
   "nombre": "Carlos",
   "apellidos": "Garcia"
+}
+
+###
+POST http://localhost:8010/peliculas
+Content-Type: application/json
+Accept: text/xml, application/json
+
+{
+  "id":1001,
+  "titulo": "Prueba",
+  "descripcion": "Esto es una prueba",
+  "idioma":3,
+  "ultima_actualizacion": "2021-10-22",
+  "duracion": 5,
+  "rate":5,
+  "coste": 2,
+  "actorespelis":[10,20],
+  "categoriaspelis":[6]
 }

@@ -70,4 +70,12 @@ public class FilmCategory implements Serializable {
 		this.film = film;
 	}
 
+	public FilmCategory(Film film, Category category) {
+		super();
+		this.film = film;
+		this.category = category;
+	}
+	
+	
+
 }

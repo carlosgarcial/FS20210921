@@ -76,14 +76,32 @@ public class Film extends EntityBase<Film> implements Serializable {
 		super();
 		this.filmId = filmId;
 	}
-	
 
-	public Film(int filmId, String title, String description, Language language) {
+	public Film(int filmId, String title, String description, Language language, Timestamp lastUpdate, byte rentalDuration, BigDecimal rentalRate, BigDecimal replacementCost,
+			List<FilmActor> filmActors, @Valid List<FilmCategory> filmCategories) {
 		super();
 		this.filmId = filmId;
 		this.title = title;
 		this.description = description;
 		this.language = language;
+		this.lastUpdate = lastUpdate;
+		this.rentalDuration = rentalDuration;
+		this.rentalRate = rentalRate;
+		this.replacementCost = replacementCost;
+		this.filmActors = filmActors;
+		this.filmCategories = filmCategories;
+	}
+	
+	public Film(int filmId, String title, String description, Language language, Timestamp lastUpdate, byte rentalDuration, BigDecimal rentalRate, BigDecimal replacementCost) {
+		super();
+		this.filmId = filmId;
+		this.title = title;
+		this.description = description;
+		this.language = language;
+		this.lastUpdate = lastUpdate;
+		this.rentalDuration = rentalDuration;
+		this.rentalRate = rentalRate;
+		this.replacementCost = replacementCost;
 	}
 
 	public int getFilmId() {
@@ -196,6 +214,13 @@ public class Film extends EntityBase<Film> implements Serializable {
 
 		return filmActor;
 	}
+	
+	public FilmActor addFilmActor(Actor actor) {
+		FilmActor nuevo = new FilmActor(this, actor);
+		getFilmActors().add(nuevo);
+
+		return nuevo;
+	}
 
 	public FilmActor removeFilmActor(FilmActor filmActor) {
 		getFilmActors().remove(filmActor);
@@ -217,6 +242,13 @@ public class Film extends EntityBase<Film> implements Serializable {
 		filmCategory.setFilm(this);
 
 		return filmCategory;
+	}
+	
+	public FilmCategory addFilmCategory(Category category) {
+		FilmCategory nuevocat = new FilmCategory(this,category);
+		getFilmCategories().add(nuevocat);
+
+		return nuevocat;
 	}
 
 	public FilmCategory removeFilmCategory(FilmCategory filmCategory) {

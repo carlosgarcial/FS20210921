@@ -7,8 +7,11 @@ import com.example.domains.core.EntityBase;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import net.bytebuddy.asm.Advice.Return;
+
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Objects;
 
 
 /**
@@ -43,6 +46,10 @@ public class Language extends EntityBase<Language> implements Serializable {
 	private List<Film> filmsVO;
 
 	public Language() {
+	}
+
+	public Language(int languageid) {
+		this.languageId = languageid;
 	}
 
 	public int getLanguageId() {
@@ -113,4 +120,22 @@ public class Language extends EntityBase<Language> implements Serializable {
 		return filmsVO;
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(languageId);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Language other = (Language) obj;
+		return languageId == other.languageId;
+	}
+
+	
 }
