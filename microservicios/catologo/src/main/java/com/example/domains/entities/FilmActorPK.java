@@ -20,6 +20,13 @@ public class FilmActorPK implements Serializable {
 
 	public FilmActorPK() {
 	}
+	
+	public FilmActorPK(int filmId, int actorId) {
+		super();
+		this.filmId = filmId;
+		this.actorId = actorId;
+	}
+
 	public int getActorId() {
 		return this.actorId;
 	}

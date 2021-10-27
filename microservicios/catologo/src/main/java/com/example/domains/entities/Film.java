@@ -8,6 +8,7 @@ import com.example.domains.core.EntityBase;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -62,12 +63,12 @@ public class Film extends EntityBase<Film> implements Serializable {
 
 	//bi-directional many-to-one association to FilmActor
 	@OneToMany(mappedBy="film")
-	private List<FilmActor> filmActors;
+	private List<FilmActor> filmActors = new ArrayList<FilmActor>();
 
 	//bi-directional many-to-one association to FilmCategory
 	@OneToMany(mappedBy="film")
 	@Valid
-	private List<FilmCategory> filmCategories;
+	private List<FilmCategory> filmCategories = new ArrayList<FilmCategory>();
 
 	public Film() {
 	}

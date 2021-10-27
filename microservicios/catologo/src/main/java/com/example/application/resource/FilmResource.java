@@ -32,6 +32,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.example.domains.contracts.services.ActorService;
 import com.example.domains.contracts.services.FilmService;
+import com.example.domains.entities.Actor;
+import com.example.domains.entities.Category;
 import com.example.domains.entities.FilmActor;
 import com.example.domains.entities.dtos.ActorDTO;
 import com.example.domains.entities.dtos.FilmDTO;
@@ -83,10 +85,14 @@ public class FilmResource {
 //	}
 	
 	@PostMapping
-	public ResponseEntity<Object> create(@Valid @RequestBody FilmDTO item) throws BadRequestException, DuplicateKeyException, InvalidDataException {
+	@Transactional
+	public ResponseEntity<Object> create(@Valid @RequestBody FilmDTO item) throws BadRequestException, DuplicateKeyException, InvalidDataException, NotFoundException {
 		if(item == null)
 			throw new BadRequestException("Faltan los datos");
 		var newItem = srv.add(FilmDTO.from(item));
+		item.getFilmActors().forEach(idactor->newItem.addFilmActor(new Actor(idactor)));
+		item.getFilmCategories().forEach(idcategoria->newItem.addFilmCategory(new Category(idcategoria)));
+		srv.modify(newItem);
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{filmId}")
 			.buildAndExpand(newItem.getFilmId()).toUri();
 		return ResponseEntity.created(location).build();

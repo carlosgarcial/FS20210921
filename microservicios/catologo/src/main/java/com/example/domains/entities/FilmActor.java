@@ -38,6 +38,7 @@ public class FilmActor implements Serializable {
 		super();
 		this.film = film;
 		this.actor = actor;
+		setId(new FilmActorPK(film.getFilmId(), actor.getActorId()));
 	}
 
 	public FilmActorPK getId() {

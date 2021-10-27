@@ -74,6 +74,7 @@ public class FilmCategory implements Serializable {
 		super();
 		this.film = film;
 		this.category = category;
+		setId(new FilmCategoryPK(film.getFilmId(), category.getCategoryId()));
 	}
 	
 	

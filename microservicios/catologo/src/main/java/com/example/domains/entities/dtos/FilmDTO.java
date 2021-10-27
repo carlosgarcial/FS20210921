@@ -57,8 +57,7 @@ public class FilmDTO {
 				source.getRentalRate(),
 				source.getReplacementCost()
 				);
-		source.filmActors.forEach(idactor->peli.addFilmActor(new Actor(idactor)));
-		source.filmCategories.forEach(idcategoria->peli.addFilmCategory(new Category(idcategoria)));
+		
 		return peli;
 	}
 
