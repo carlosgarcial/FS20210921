@@ -103,10 +103,10 @@ Accept: text/xml, application/json
 }
 
 ### 
-GET http://localhost:8010/peliculas/1003
+GET http://localhost:8010/categorias
 
 ###
-put http://localhost:8010/actores/201
+put http://localhost:8010/categorias/1
 Content-Type: application/json
 
 {

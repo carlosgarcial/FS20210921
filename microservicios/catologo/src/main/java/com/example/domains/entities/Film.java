@@ -4,6 +4,9 @@ import java.io.Serializable;
 import javax.persistence.*;
 import javax.validation.Valid;
 
+import org.hibernate.annotations.Generated;
+import org.hibernate.annotations.GenerationTime;
+
 import com.example.domains.core.EntityBase;
 
 import java.math.BigDecimal;
@@ -31,6 +34,7 @@ public class Film extends EntityBase<Film> implements Serializable {
 	private String description;
 
 	@Column(name="last_update")
+	@Generated(value = GenerationTime.ALWAYS)
 	private Timestamp lastUpdate;
 
 	private int length;

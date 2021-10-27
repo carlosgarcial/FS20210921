@@ -3,6 +3,9 @@ package com.example.domains.entities;
 import java.io.Serializable;
 import javax.persistence.*;
 
+import org.hibernate.annotations.Generated;
+import org.hibernate.annotations.GenerationTime;
+
 import com.example.domains.core.EntityBase;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -31,6 +34,7 @@ public class Language extends EntityBase<Language> implements Serializable {
 
 	@Column(name="last_update")
 	@JsonFormat(pattern = "yyyy-MM-dd")
+	@Generated(value = GenerationTime.ALWAYS)
 	private Timestamp lastUpdate;
 
 	private String name;
