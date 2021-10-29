@@ -132,3 +132,9 @@ Accept: text/xml, application/json
   "actorespelis":[],
   "categoriaspelis":[6]
 }
+
+###
+GET http://localhost:8066/api/contactos
+
+###
+GET http://localhost:8065/serie

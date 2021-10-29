@@ -23,6 +23,7 @@ import lombok.Data;
 
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.ServletRequest;
@@ -30,6 +31,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
@@ -40,6 +42,7 @@ import org.springframework.http.ResponseEntity;
 
 @RestController
 public class DemosResource {
+	private static final Logger LOGGER = Logger.getLogger(DemosResource.class.getName());
 	@GetMapping("/params/{id}")
 	public String cotilla(
 	        @PathVariable String id,
@@ -150,6 +153,15 @@ public class DemosResource {
 	public String traeBalanceado() {
 //		return restLB.getForObject("lb://catalogo-service/", String.class);
 		return proxy.getRaiz();
+	}
+
+	@Value("${jwt.secret}")
+	String secreto;
+	
+	@GetMapping("/config")
+	public String traeConfig() {
+		LOGGER.warning("La configuración es: " + secreto);
+		return secreto;
 	}
 	
 }

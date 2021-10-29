@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/blog"><img src="assets/logo_transparent.png" width="100"  alt="Logotipo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" >
+          <a class="nav-link" routerLink="/blog" routerLinkActive="active"><i class="fas fa-home"></i> Inicio</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" routerLink="calculadora" routerLinkActive="active"><i class="fas fa-calculator"></i> Calculadora</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" routerLink="/contactos" routerLinkActive="active"><i class="fas fa-address-book"></i> Contactos</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" routerLink="/libros" routerLinkActive="active"><i class="fas fa-book"></i> Libros</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" routerLink="/clientes" routerLinkActive="active"><i class="fas fa-address-book"></i> Clientes</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" routerLink="/config" routerLinkActive="active"><i class="fas fa-wrench"></i> Config</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  data-bs-toggle="dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-bars"></i>
+            Otros
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="nav-item dropdown-item" routerLink="/demos" routerLinkActive="active"><i class="fas fa-cube"></i> Demos</a>
+            <a class="nav-item dropdown-item" routerLink="/falsa" routerLinkActive="active"><i class="fas fa-bug"></i> Página Error</a>
+          </div>
+        </li>
+      </ul>
+      <app-login></app-login>
+    </div>
+  </div>
+</nav>
