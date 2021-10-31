@@ -11,6 +11,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AjaxWaitInterceptor } from './main/ajax-wait';
 import { BlogModule } from './blog';
 import { ERROR_LEVEL, LoggerService, MyCoreModule } from 'src/lib/my-core';
+import { CategoriaModule } from './categoria';
+import { IdiomaModule } from './idioma';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ERROR_LEVEL, LoggerService, MyCoreModule } from 'src/lib/my-core';
     SecurityModule,
     HttpClientModule,
     BlogModule,
-    MyCoreModule
+    MyCoreModule,
+    CategoriaModule,
+    IdiomaModule,
   ],
   providers: [
     LoggerService,
