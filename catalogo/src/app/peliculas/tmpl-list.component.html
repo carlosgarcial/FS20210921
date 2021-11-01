@@ -4,51 +4,31 @@
     <div class="card flex-md-row mb-4 box-shadow h-md-250">
       <div class="card-body d-flex flex-column align-items-start">
         <div class="btn-group" role="group">
-          <button *ngIf="VM.auth.isAutenticated" class="btn btn-success" [routerLink]="[item.id, 'edit']">
+          <button *ngIf="VM.auth.isAutenticated" class="btn btn-success" [routerLink]="[item.filmid, 'edit']">
             <i class="fas fa-pen"></i>
           </button>
-          <button *ngIf="VM.auth.isAutenticated" class="btn btn-danger" (click)="VM.delete(item.id)">
+          <button *ngIf="VM.auth.isAutenticated" class="btn btn-danger" (click)="VM.delete(item.filmid)">
             <i class="far fa-trash-alt"></i>
           </button>
         </div>
-        <img class="rounded-circle float-left" src="{{ item.fotourl }}" alt="Foto de {{ item.titulo }}" width="75" height="75"/>
+        <img class="rounded-circle float-left" src="assets/logopeli.png" alt="Foto de {{ item.title }}" width="75" height="75"/>
         <h4 class="mb-0">
-          <a class="text-dark" [routerLink]="['/blog', item.id]">{{item.titulo}}</a>
+          <a class="text-dark" [routerLink]="['/peliculas', item.filmid]">{{item.title}}</a>
         </h4>
-        <div class="mb-1 text-muted">{{item.fecha | date:'MMM yyyy'}}</div>
-        <p class="card-text mb-auto">{{item.texto | elipsis:100}}</p>
-        <a [routerLink]="['/blog', item.id]">Leer mas</a>
+        <div class="mb-1 text-muted">{{item.release_year | date:'MMM yyyy'}}</div>
+        <div class="mb-1 text-muted">{{item.last_update | date:'MMM yyyy'}}</div>
+        <h4>
+          {{ item.rating }}
+        </h4>
+        <h5>{{ item.rental_duration }} {{ item.length }}</h5>
+        <p>{{ item.rental_rate }}{{ item.replacement_cost }}</p>
+        <p>{{ item.language_id }}{{ item.original_language_id }}</p>
+        <p>{{ item.filmActors }}{{ item.filmCategories }}</p>
+        <p class="card-text mb-auto">{{item.description | elipsis:100}}</p>
+        <a [routerLink]="['/peliculas', item.filmid]">Leer mas</a>
       </div>
     </div>
   </div>
 </div>
-
- <!-- <button class="btn btn-success" *ngIf="VM.auth.isAutenticated" routerLink="add"><i class="fas fa-plus"></i> Añadir entrada</button>
-<div *ngFor="let item of VM.Listado | paginate: { itemsPerPage: 5, currentPage: page }">
-  <div class="row-mb-2">
-    <div class="col-md-6" *ngFor="let item of VM.Listado">
-      <div class="card flex-md-row mb-4 box-shadow h-md-250">
-        <div class="card-body d-flex flex-column align-items-start">
-          <img class="rounded-circle float-left" src="{{ item.fotourl }}" alt="Foto de {{ item.titulo }}" width="75" height="75"/>
-          <a class="text-dark" [routerLink]="['/blog', item.id]">{{item.titulo}}</a>
-          <div class="mb-1 text-muted">{{item.autor}} | {{item.fecha}}</div>
-          <p class="card-text mb-auto">{{item.texto | elipsis:80}}</p>
-          <a [routerLink]="['/blog', item.id]">Leer mas</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="btn-group" role="group">
-    <button *ngIf="VM.auth.isAutenticated" class="btn btn-info" routerLink="{{item.id}}/{{item.titulo}}-{{item.autor}}">
-      <i class="fas fa-eye"></i>
-    </button>
-    <button *ngIf="VM.auth.isAutenticated" class="btn btn-success" [routerLink]="[item.id, 'edit']">
-      <i class="fas fa-pen"></i>
-    </button>
-    <button *ngIf="VM.auth.isAutenticated" class="btn btn-danger" (click)="VM.delete(item.id)">
-      <i class="far fa-trash-alt"></i>
-    </button>
-  </div>
-</div> -->
 <pagination-controls (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente">
 </pagination-controls>
