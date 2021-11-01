@@ -1,6 +1,7 @@
 package com.example.application.resource;
 
 import java.net.URI;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -34,6 +35,7 @@ import com.example.domains.contracts.services.ActorService;
 import com.example.domains.contracts.services.FilmService;
 import com.example.domains.entities.Actor;
 import com.example.domains.entities.Category;
+import com.example.domains.entities.Film;
 import com.example.domains.entities.FilmActor;
 import com.example.domains.entities.dtos.ActorDTO;
 import com.example.domains.entities.dtos.FilmDTO;
@@ -42,6 +44,7 @@ import com.example.exceptions.BadRequestException;
 import com.example.exceptions.DuplicateKeyException;
 import com.example.exceptions.InvalidDataException;
 import com.example.exceptions.NotFoundException;
+import com.example.infraestructure.repositories.FilmRepository;
 
 import org.springframework.http.HttpStatus;
 
@@ -114,5 +117,7 @@ public class FilmResource {
 	public void delete(@PathVariable int id) {
 		srv.deleteById(id);
 	}
+	
+
 
 }

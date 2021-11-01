@@ -26,6 +26,8 @@ import java.util.Objects;
 @NamedQuery(name="Language.findAll", query="SELECT l FROM Language l")
 public class Language extends EntityBase<Language> implements Serializable {
 	private static final long serialVersionUID = 1L;
+	public static class Partial {}
+    public static class Complete extends Partial {}
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
