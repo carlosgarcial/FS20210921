@@ -1,19 +1,19 @@
-<h1>Añadir entrada al blog</h1>
+<h1>Añadir categoria al registro</h1>
 <form #miForm="ngForm">
   <div class="form-row">
     <div class="form-group col-md-2">
-      <label class="form-label" for="idcate"><b>ID Categoria: </b></label>
-      <input class="form-control"[class.is-invalid]="idcate.invalid && miForm.dirty" type="number"name="idcate" id="idcate" [(ngModel)]="VM.Elemento.idcate" #idcate="ngModel" required min="0"/>
-      <output class="invalid-feedback" [myShowErrors]="idcate.errors"></output>
+      <label class="form-label" for="categoryId"><b>ID Categoria: </b></label>
+      <input class="form-control"[class.is-invalid]="categoryId.invalid && miForm.dirty" type="number"name="categoryId" id="categoryId" [(ngModel)]="VM.Elemento.categoryId" #categoryId="ngModel" required min="0"/>
+      <output class="invalid-feedback" [myShowErrors]="categoryId.errors"></output>
     </div>
     <div class="form-group col-md-4">
-      <label class="form-label" for="categori"><b>Categoria: </b></label>
-      <input class="form-control" [class.is-invalid]="categori.invalid" type="text" name="categori" id="categori" [(ngModel)]="VM.Elemento.categori" #categori="ngModel" required minlength="2" maxlength="50"/>
-      <output class="invalid-feedback" [myShowErrors]="categori.errors"></output>
+      <label class="form-label" for="name"><b>Categoria: </b></label>
+      <input class="form-control" [class.is-invalid]="name.invalid" type="text" name="name" id="name" [(ngModel)]="VM.Elemento.name" #name="ngModel" required minlength="2" maxlength="50"/>
+      <output class="invalid-feedback" [myShowErrors]="name.errors"></output>
     </div>
     <div class="form-group col-md-2">
-      <label class="form-label" for="fmodif"><b>Ultima modificacion: </b></label>
-      <input class="form-control" type="date" name="fmodif" id="fmodif" [(ngModel)]="VM.Elemento.fmodif" #fmodif="ngModel"/>
+      <label class="form-label" for="lastupdate"><b>Ultima modificacion: </b></label>
+      <input class="form-control" type="date" name="lastupdate" id="lastupdate" [(ngModel)]="VM.Elemento.lastupdate" #lastupdate="ngModel"/>
     </div>
   </div>
   <div class="form-group">

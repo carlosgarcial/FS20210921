@@ -9,10 +9,11 @@ import { AuthInterceptor, SecurityModule } from './security';
 import { environment } from 'src/environments/environment';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AjaxWaitInterceptor } from './main/ajax-wait';
-import { BlogModule } from './blog';
 import { ERROR_LEVEL, LoggerService, MyCoreModule } from 'src/lib/my-core';
 import { CategoriaModule } from './categoria';
 import { IdiomaModule } from './idioma';
+import { ActorModule } from './actor';
+import { PeliculasModule } from './peliculas';
 
 @NgModule({
   declarations: [
@@ -26,10 +27,11 @@ import { IdiomaModule } from './idioma';
     CommonServicesModule,
     SecurityModule,
     HttpClientModule,
-    BlogModule,
     MyCoreModule,
     CategoriaModule,
     IdiomaModule,
+    ActorModule,
+    PeliculasModule,
   ],
   providers: [
     LoggerService,

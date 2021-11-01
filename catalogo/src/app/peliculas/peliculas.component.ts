@@ -1,15 +1,15 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { BlogViewModelService } from './servicios.service';
+import { PeliculasViewModelService } from './servicios.service';
 
 @Component({
-  selector: 'app-blog',
+  selector: 'app-peliculas',
   templateUrl: './tmpl-anfitrion.component.html',
-  styleUrls: ['./blog.component.scss'],
+  styleUrls: ['./peliculas.component.scss'],
 })
-export class BlogComponent implements OnInit {
-  constructor(protected vm: BlogViewModelService) {}
-  public get VM(): BlogViewModelService {
+export class PeliculasComponent implements OnInit {
+  constructor(protected vm: PeliculasViewModelService) {}
+  public get VM(): PeliculasViewModelService {
     return this.vm;
   }
   ngOnInit(): void {
@@ -18,14 +18,14 @@ export class BlogComponent implements OnInit {
 }
 
 @Component({
-  selector: 'app-blog-list',
+  selector: 'app-peliculas-list',
   templateUrl: './tmpl-list.component.html',
-  styleUrls: ['./blog.component.scss'],
+  styleUrls: ['./peliculas.component.scss'],
 })
-export class BlogListComponent implements OnInit {
+export class PeliculasListComponent implements OnInit {
   public page: number = 0;
-  constructor(protected vm: BlogViewModelService) {}
-  public get VM(): BlogViewModelService {
+  constructor(protected vm: PeliculasViewModelService) {}
+  public get VM(): PeliculasViewModelService {
     return this.vm;
   }
   ngOnInit(): void {
@@ -33,13 +33,13 @@ export class BlogListComponent implements OnInit {
   }
 }
 @Component({
-  selector: 'app-blog-add',
+  selector: 'app-peliculas-add',
   templateUrl: './tmpl-form.component.html',
-  styleUrls: ['./blog.component.scss'],
+  styleUrls: ['./peliculas.component.scss'],
 })
-export class BlogAddComponent implements OnInit {
-  constructor(protected vm: BlogViewModelService) {}
-  public get VM(): BlogViewModelService {
+export class PeliculasAddComponent implements OnInit {
+  constructor(protected vm: PeliculasViewModelService) {}
+  public get VM(): PeliculasViewModelService {
     return this.vm;
   }
   ngOnInit(): void {
@@ -47,18 +47,18 @@ export class BlogAddComponent implements OnInit {
   }
 }
 @Component({
-  selector: 'app-blog-edit',
+  selector: 'app-peliculas-edit',
   templateUrl: './tmpl-form.component.html',
-  styleUrls: ['./blog.component.scss'],
+  styleUrls: ['./peliculas.component.scss'],
 })
-export class BlogEditComponent implements OnInit, OnDestroy {
+export class PeliculasEditComponent implements OnInit, OnDestroy {
   private obs$: any;
   constructor(
-    protected vm: BlogViewModelService,
+    protected vm: PeliculasViewModelService,
     protected route: ActivatedRoute,
     protected router: Router
   ) {}
-  public get VM(): BlogViewModelService {
+  public get VM(): PeliculasViewModelService {
     return this.vm;
   }
   ngOnInit(): void {
@@ -76,14 +76,14 @@ export class BlogEditComponent implements OnInit, OnDestroy {
   }
 }
 @Component({
-  selector: 'app-blog-view',
+  selector: 'app-peliculas-view',
   templateUrl: './tmpl-view.component.html',
-  styleUrls: ['./blog.component.scss'],
+  styleUrls: ['./peliculas.component.scss'],
 })
-export class BlogViewComponent implements OnInit, OnDestroy {
+export class PeliculasViewComponent implements OnInit, OnDestroy {
   private obs$: any;
-  constructor(protected vm: BlogViewModelService, protected route: ActivatedRoute, protected router: Router) {}
-  public get VM(): BlogViewModelService {
+  constructor(protected vm: PeliculasViewModelService, protected route: ActivatedRoute, protected router: Router) {}
+  public get VM(): PeliculasViewModelService {
     return this.vm;
   }
   ngOnInit(): void {
@@ -101,10 +101,10 @@ export class BlogViewComponent implements OnInit, OnDestroy {
   }
 }
 
-export const Blog_COMPONENTES = [
-  BlogComponent,
-  BlogListComponent,
-  BlogAddComponent,
-  BlogEditComponent,
-  BlogViewComponent,
+export const Peliculas_COMPONENTES = [
+  PeliculasComponent,
+  PeliculasListComponent,
+  PeliculasAddComponent,
+  PeliculasEditComponent,
+  PeliculasViewComponent,
 ];

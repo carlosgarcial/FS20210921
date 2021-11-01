@@ -1,19 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BlogComponent, BlogListComponent, BlogAddComponent, BlogEditComponent, BlogViewComponent } from './blog/blog.component';
+import { ActorAddComponent, ActorEditComponent, ActorListComponent, ActorViewComponent } from './actor/actor.component';
 import { CategoriaAddComponent, CategoriaEditComponent, CategoriaListComponent, CategoriaViewComponent } from './categoria/categoria.component';
 import { IdiomaListComponent, IdiomaAddComponent, IdiomaEditComponent, IdiomaViewComponent } from './idioma/idioma.component';
 import { PageNotFoundComponent } from './main';
+import { PeliculasListComponent, PeliculasAddComponent, PeliculasEditComponent, PeliculasViewComponent, PeliculasComponent } from './peliculas/peliculas.component';
 import { RegisterUserComponent } from './security';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', component: BlogComponent },
-  { path: 'blog', children: [
-    { path: '', component: BlogListComponent },
-    { path: 'add', component: BlogAddComponent },
-    { path: ':id/edit', component: BlogEditComponent },
-    { path: ':id', component: BlogViewComponent },
-    { path: ':id/:kk', component: BlogViewComponent },
+  { path: '', pathMatch: 'full', component: PeliculasComponent },
+  { path: 'peliculas', children: [
+    { path: '', component: PeliculasListComponent },
+    { path: 'add', component: PeliculasAddComponent },
+    { path: ':id/edit', component: PeliculasEditComponent },
+    { path: ':id', component: PeliculasViewComponent },
+    { path: ':id/:kk', component: PeliculasViewComponent },
+  ]},
+  { path: 'actor', children: [
+    { path: '', component: ActorListComponent },
+    { path: 'add', component: ActorAddComponent },
+    { path: ':id/edit', component: ActorEditComponent },
+    { path: ':id', component: ActorViewComponent },
+    { path: ':id/:kk', component: ActorViewComponent },
   ]},
   { path: 'categoria', children: [
     { path: '', component: CategoriaListComponent },

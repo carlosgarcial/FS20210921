@@ -1,4 +1,4 @@
-<h1>Blog <input *ngIf="VM.auth.isAutenticated" class="fas fa-plus" type="button" value="Añadir" routerLink="add"></h1>
+<h1>Listado de Peliculas <input *ngIf="VM.auth.isAutenticated" class="fas fa-plus" type="button" value="Añadir" routerLink="add"></h1>
 <div class="row mb-2">
   <div class="col-md-6" *ngFor="let item of VM.Listado | paginate: { itemsPerPage: 6, currentPage: page }">
     <div class="card flex-md-row mb-4 box-shadow h-md-250">

@@ -1,19 +1,19 @@
-<h1>Añadir entrada al blog</h1>
+<h1>Añadir idioma al registro</h1>
 <form #miForm="ngForm">
   <div class="form-row">
     <div class="form-group col-md-2">
-      <label class="form-label" for="ididioma"><b>ID Idioma: </b></label>
-      <input class="form-control"[class.is-invalid]="ididioma.invalid && miForm.dirty" type="number"name="ididioma" id="ididioma" [(ngModel)]="VM.Elemento.ididioma" #ididioma="ngModel" required min="0"/>
-      <output class="invalid-feedback" [myShowErrors]="ididioma.errors"></output>
+      <label class="form-label" for="languageId"><b>ID Idioma: </b></label>
+      <input class="form-control"[class.is-invalid]="languageId.invalid && miForm.dirty" type="number"name="languageId" id="languageId" [(ngModel)]="VM.Elemento.languageId" #languageId="ngModel" required min="0"/>
+      <output class="invalid-feedback" [myShowErrors]="languageId.errors"></output>
     </div>
     <div class="form-group col-md-4">
-      <label class="form-label" for="idiom"><b>Idioma: </b></label>
-      <input class="form-control" [class.is-invalid]="idiom.invalid" type="text" name="idiom" id="idiom" [(ngModel)]="VM.Elemento.idiom" #idiom="ngModel" required minlength="2" maxlength="50"/>
-      <output class="invalid-feedback" [myShowErrors]="idiom.errors"></output>
+      <label class="form-label" for="name"><b>Idioma: </b></label>
+      <input class="form-control" [class.is-invalid]="name.invalid" type="text" name="name" id="name" [(ngModel)]="VM.Elemento.name" #name="ngModel" required minlength="2" maxlength="50"/>
+      <output class="invalid-feedback" [myShowErrors]="name.errors"></output>
     </div>
     <div class="form-group col-md-2">
-      <label class="form-label" for="fmodif"><b>Ultima modificacion: </b></label>
-      <input class="form-control" type="date" name="fmodif" id="fmodif" [(ngModel)]="VM.Elemento.fmodif" #fmodif="ngModel"/>
+      <label class="form-label" for="lastupdate"><b>Ultima modificacion: </b></label>
+      <input class="form-control" type="date" name="lastupdate" id="lastupdate" [(ngModel)]="VM.Elemento.lastupdate" #lastupdate="ngModel"/>
     </div>
   </div>
   <div class="form-group">

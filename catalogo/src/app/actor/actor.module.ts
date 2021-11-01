@@ -4,20 +4,20 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MyCoreModule } from 'src/lib/my-core';
 import { CommonServicesModule } from '../common-services';
-import { Blog_COMPONENTES } from './blog.component';
+import { Actor_COMPONENTES } from './actor.component';
 import { CommonComponentModule } from '../common-component/common-component.module';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
-    Blog_COMPONENTES,
+    Actor_COMPONENTES,
   ],
   exports: [
-    Blog_COMPONENTES,
+    Actor_COMPONENTES,
   ],
   imports: [
     CommonModule, FormsModule, RouterModule.forChild([]),
     MyCoreModule, CommonServicesModule, CommonComponentModule,NgxPaginationModule
   ]
 })
-export class BlogModule { }
+export class ActorModule { }

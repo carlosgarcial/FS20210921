@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-import { CategoriaViewModelService } from './servicios.service';
+import { IdiomaViewModelService } from './servicios.service';
 
-fdescribe('CategoriaViewModelService', () => {
-  let service: CategoriaViewModelService;
+fdescribe('IdiomaViewModelService', () => {
+  let service: IdiomaViewModelService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CategoriaViewModelService);
+    service = TestBed.inject(IdiomaViewModelService);
   });
 
   it('should be created', () => {

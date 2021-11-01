@@ -11,9 +11,9 @@ import { AuthService, AUTH_REQUIRED } from '../security';
 @Injectable({
   providedIn: 'root',
 })
-export class BlogDAOService extends RESTDAOService<any, any> {
+export class PeliculasDAOService extends RESTDAOService<any, any> {
   constructor(http: HttpClient) {
-    super(http, 'blog', {
+    super(http, 'peliculas', {
       context: new HttpContext().set(AUTH_REQUIRED, true),
     });
   }
@@ -22,17 +22,17 @@ export class BlogDAOService extends RESTDAOService<any, any> {
 @Injectable({
   providedIn: 'root',
 })
-export class BlogViewModelService {
+export class PeliculasViewModelService {
   protected modo: ModoCRUD = 'list';
   protected listado: Array<any> = [];
   protected elemento: any = {};
   protected idOriginal: any = null;
-  protected listURL = '/blog';
+  protected listURL = '/peliculas';
 
   constructor(
     protected notify: NotificationService,
     protected out: LoggerService,
-    protected dao: BlogDAOService,
+    protected dao: PeliculasDAOService,
     protected router: Router,
     public auth: AuthService,
   ) {}
