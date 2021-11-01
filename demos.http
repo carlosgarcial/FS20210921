@@ -88,53 +88,29 @@ Content-Type: application/json
 
 delete  http://localhost:8001/actores/206
 
+###
 
-
+get http://localhost:8001/auto/
 
 ###
-post http://localhost:8010/actores
-Content-Type: application/json
-Accept: text/xml, application/json
 
-{
-  "id": 555,
-  "nombre": "Carlos",
-  "apellidos": "coton"
-}
-
-### 
-GET http://localhost:8010/categorias
+get http://localhost:8001/auto/paises
 
 ###
-put http://localhost:8010/categorias/1
+
+put http://localhost:8001/auto/countries/119
 Content-Type: application/json
 
-{
-  "id": 201,
-  "nombre": "Carlos",
-  "apellidos": "Garcia"
-}
+{ "countryId": 119, "country": "Cataluñaaa" }
 
 ###
-POST http://localhost:8010/peliculas
-Content-Type: application/json
-Accept: text/xml, application/json
 
-{
-  "id":0,
-  "titulo": "Prueba2",
-  "descripcion": "Esto",
-  "idioma":3,
-  "ultima_actualizacion": "2021-10-22",
-  "duracion": 5,
-  "rate":5,
-  "coste": 2,
-  "actorespelis":[],
-  "categoriaspelis":[6]
-}
+DELETE http://localhost:8001/auto/paises/112
 
 ###
-GET http://localhost:8066/api/contactos
+
+GET http://localhost:8001/auto/profile/paises
 
 ###
-GET http://localhost:8065/serie
+
+POST http://localhost:8089/v2/pet
