@@ -4,18 +4,16 @@
     <div class="well well-sm">
       <div class="row">
         <div class="col-sm-6 col-md-4">
-          <img src="assets/logopeli.png" alt="Foto de {{ VM.Elemento.title }}" class="rounded" width="75" height="75"/>
+          <img src="assets/logopeli.png" alt="Foto de {{ VM.Elemento.titulo }}" class="rounded" width="75" height="75"/>
         </div>
         <div class="col-sm-6 col-md-8">
-          <h4>
-            {{ VM.Elemento.rating }} {{ VM.Elemento.release_year }}
-          </h4>
-          <h5>{{ VM.Elemento.rental_duration }} {{ VM.Elemento.last_update }} {{ VM.Elemento.length }}</h5>
-          <p>{{ VM.Elemento.rental_rate }}{{ VM.Elemento.replacement_cost }}</p>
-          <p>{{ VM.Elemento.language_id }}{{ VM.Elemento.original_language_id }}</p>
-          <p>{{ VM.Elemento.filmActors }}{{ VM.Elemento.filmCategories }}</p>
+          <p><b>Duracion: </b>{{ VM.Elemento.duracion }}<b> Ultima modificación: </b> {{ VM.Elemento.ultima_actualizacion| date:'yyyy mm dd' }}</p>
+          <p><b>Ratio: </b>{{ VM.Elemento.rate }}<b> Coste: </b>{{ VM.Elemento.coste }}</p>
+          <p><b>Idioma: </b>{{ VM.Elemento.idioma }}</p>
+          <p><b>Lista actores: </b>{{ VM.Elemento.actorespelis }}</p>
+          <p><b> Lista categorias: </b>{{ VM.Elemento.categoriaspelis }}</p>
           <p>
-            {{ VM.Elemento.description }}
+            <b>Descripcion: </b>{{ VM.Elemento.descripcion }}
           </p>
           <br>
           <div class="btn-group">

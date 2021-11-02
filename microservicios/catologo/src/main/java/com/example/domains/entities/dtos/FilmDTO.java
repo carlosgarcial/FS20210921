@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -42,9 +43,9 @@ public class FilmDTO {
 	@JsonProperty("coste")
 	private BigDecimal replacementCost;
 	@JsonProperty("actorespelis")
-	private List<Integer> filmActors;
+	private List<Integer> filmActors = new ArrayList<Integer>();
 	@JsonProperty("categoriaspelis")
-	private List<Integer> filmCategories;
+	private List<Integer> filmCategories = new ArrayList<Integer>();
 	
 	public static Film from(FilmDTO source) {
 		Film peli = new Film(

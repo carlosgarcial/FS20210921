@@ -1,20 +1,20 @@
 <h1>Listado de Idiomas <input *ngIf="VM.auth.isAutenticated" class="fas fa-plus" type="button" value="Añadir" routerLink="add"></h1>
-<div class="row mb-2">
-  <div class="col-md-6" *ngFor="let item of VM.Listado | paginate: { itemsPerPage: 6, currentPage: page }">
+<div class="row mb-3">
+  <div class="col-md-4" *ngFor="let item of VM.Listado | paginate: { itemsPerPage: 6, currentPage: page }">
     <div class="card flex-md-row mb-4 box-shadow h-md-250">
-      <div class="card-body d-flex flex-column align-items-start">
+      <div class="card-body d-flex flex-column align-items-center">
         <div class="btn-group" role="group">
-          <button *ngIf="VM.auth.isAutenticated" class="btn btn-success" [routerLink]="[item.languageId, 'edit']">
+          <button *ngIf="VM.auth.isAutenticated" class="btn btn-success" [routerLink]="[item.id, 'edit']">
             <i class="fas fa-pen"></i>
           </button>
-          <button *ngIf="VM.auth.isAutenticated" class="btn btn-danger" (click)="VM.delete(item.languageId)">
+          <button *ngIf="VM.auth.isAutenticated" class="btn btn-danger" (click)="VM.delete(item.id)">
             <i class="far fa-trash-alt"></i>
           </button>
         </div>
+        <img class="rounded-circle float-left" src="assets/idioma.png" alt="Foto de {{ item.idioma }}" width="75" height="75"/>
         <h4 class="mb-0">
-          <a class="text-dark" [routerLink]="['/idioma', item.languageId]">{{item.name}}</a>
+          <a class="text-dark" [routerLink]="['/idiomas', item.id]">{{item.idioma}}</a>
         </h4>
-        <div class="mb-1 text-muted">{{item.lastupdate | date:'MMM yyyy'}}</div>
       </div>
     </div>
   </div>

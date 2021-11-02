@@ -50,9 +50,9 @@ public class CatalogoResource {
 				}
 			}
 			private Href self = new Href("");
-			private Href actores = new Href("/actor");
+			private Href actores = new Href("/actores");
 			private Href peliculas = new Href("/peliculas");
-			private Href categorias = new Href("/categoria");
+			private Href categorias = new Href("/categorias");
 			private Href idiomas = new Href("/idiomas");
 			private Href novedades = new Href("/novedades");
 		}

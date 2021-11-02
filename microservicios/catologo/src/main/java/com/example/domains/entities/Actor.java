@@ -12,6 +12,8 @@ import org.hibernate.annotations.GenerationTime;
 import org.hibernate.validator.constraints.Length;
 
 import com.example.domains.core.EntityBase;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -32,21 +34,25 @@ public class Actor extends EntityBase<Actor> implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="actor_id")
+	@JsonProperty("id")
 	private int actorId;
 
 	@Column(name="first_name")
 	@NotBlank
 	@Length(min=2, max = 45)
+	@JsonProperty("nombre")
 	private String firstName;
 
 	@Column(name="last_name")
 	@NotBlank
 	@Length(min=2, max = 45)
+	@JsonProperty("apellido")
 	private String lastName;
 
 	@Column(name="last_update")
 	@Generated(value = GenerationTime.ALWAYS)
 	@PastOrPresent
+	@JsonIgnore
 	private Timestamp lastUpdate;
 
 	//bi-directional many-to-one association to FilmActor

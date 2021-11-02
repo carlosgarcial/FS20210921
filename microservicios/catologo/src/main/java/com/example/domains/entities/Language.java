@@ -9,6 +9,7 @@ import org.hibernate.annotations.GenerationTime;
 import com.example.domains.core.EntityBase;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import net.bytebuddy.asm.Advice.Return;
 
@@ -32,13 +33,15 @@ public class Language extends EntityBase<Language> implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="language_id")
+	@JsonProperty("id")
 	private int languageId;
 
 	@Column(name="last_update")
-	@JsonFormat(pattern = "yyyy-MM-dd")
 	@Generated(value = GenerationTime.ALWAYS)
+	@JsonIgnore
 	private Timestamp lastUpdate;
 
+	@JsonProperty("idioma")
 	private String name;
 
 	//bi-directional many-to-one association to Film

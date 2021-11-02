@@ -116,3 +116,18 @@ Content-Type: application/json
   "actorespelis": [ 1, 2, 6],
   "categoriaspelis": [ 6 ]
 }
+###
+
+POST http://localhost:8010/peliculas
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJNaWNyb3NlcnZpY2lvc0pXVCIsInN1YiI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdLCJpYXQiOjE2MzU4Njk1MDMsImV4cCI6MTYzNTg3MDEwM30.agX1qXW4q-kKfFKHHQgEERcsHz0yRlr5ppuIr2Vp_A62dmYpNWFtZX4nH4dGhUg9AjG0ZWUOCfm8-7DhaSplYw
+
+{"titulo":"Esto es una prueba",
+"duracion":5,"rate":5,"coste":6,
+"descripcion":"rtd","idioma":1,
+"actorespelis": [ 1, 2, 6],
+"categoriaspelis": [ 6 ]
+}
+
+###
+GET http://localhost:8010/peliculas/1

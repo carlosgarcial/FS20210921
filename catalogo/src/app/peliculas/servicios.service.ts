@@ -6,6 +6,7 @@ import { NotificationService } from '../common-services';
 import { ModoCRUD } from '../base-code/typos';
 import { Router } from '@angular/router';
 import { AuthService, AUTH_REQUIRED } from '../security';
+import { IdiomaDAOService } from '../idioma/servicios.service';
 
 
 @Injectable({
@@ -25,6 +26,7 @@ export class PeliculasDAOService extends RESTDAOService<any, any> {
 export class PeliculasViewModelService {
   protected modo: ModoCRUD = 'list';
   protected listado: Array<any> = [];
+  public idiomas: Array<any> = [];
   protected elemento: any = {};
   protected idOriginal: any = null;
   protected listURL = '/peliculas';
@@ -35,7 +37,10 @@ export class PeliculasViewModelService {
     protected dao: PeliculasDAOService,
     protected router: Router,
     public auth: AuthService,
-  ) {}
+    daoidiomas : IdiomaDAOService
+  ) {
+    daoidiomas.query().subscribe(data=>this.idiomas=data)
+  }
   public get Modo(): ModoCRUD {
     return this.modo;
   }
@@ -57,7 +62,8 @@ export class PeliculasViewModelService {
   }
 
   public add(): void {
-    this.elemento = {};
+    this.elemento = {"actorespelis": [],
+    "categoriaspelis": []};
     this.modo = 'add';
   }
   public edit(key: any): void {

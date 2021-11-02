@@ -2,19 +2,19 @@
 <form #miForm="ngForm">
   <div class="form-row">
     <div class="form-group col-md-2">
-      <label class="form-label" for="actorid"><b>Código del actor: </b></label>
-      <input class="form-control"[class.is-invalid]="actorid.invalid && miForm.dirty" type="number"name="actorid" id="actorid" [(ngModel)]="VM.Elemento.actorid" #actorid="ngModel" required min="0"/>
-      <output class="invalid-feedback" [myShowErrors]="actorid.errors"></output>
+      <label class="form-label" for="id"><b>Código del actor: </b></label>
+      <input class="form-control"[class.is-invalid]="id.invalid && miForm.dirty" type="number"name="id" id="id" [(ngModel)]="VM.Elemento.id" #id="ngModel" required min="0"/>
+      <output class="invalid-feedback" [myShowErrors]="id.errors"></output>
     </div>
     <div class="form-group col-md-4">
-      <label class="form-label" for="firstname"><b>Nombre: </b></label>
-      <input class="form-control" [class.is-invalid]="firstname.invalid" type="text" name="firstname" id="firstname" [(ngModel)]="VM.Elemento.firstname" #firstname="ngModel" required minlength="2" maxlength="50"/>
-      <output class="invalid-feedback" [myShowErrors]="firstname.errors"></output>
+      <label class="form-label" for="nombre"><b>Nombre: </b></label>
+      <input class="form-control" [class.is-invalid]="nombre.invalid" type="text" name="nombre" id="nombre" [(ngModel)]="VM.Elemento.nombre" #nombre="ngModel" required minlength="2" maxlength="50"/>
+      <output class="invalid-feedback" [myShowErrors]="nombre.errors"></output>
     </div>
     <div class="form-group col-md-4">
-      <label class="form-label" for="lastname"><b>Apellidos: </b></label>
-      <input class="form-control" [class.is-invalid]="lastname.invalid" type="text" name="lastname" id="lastname" [(ngModel)]="VM.Elemento.lastname" #lastname="ngModel" minlength="2" maxlength="50"/>
-      <output class="invalid-feedback" [myShowErrors]="lastname.errors"></output>
+      <label class="form-label" for="apellidos"><b>Apellidos: </b></label>
+      <input class="form-control" [class.is-invalid]="apellidos.invalid" type="text" name="apellidos" id="apellidos" [(ngModel)]="VM.Elemento.apellidos" #apellidos="ngModel" minlength="2" maxlength="50"/>
+      <output class="invalid-feedback" [myShowErrors]="apellidos.errors"></output>
     </div>
     <div class="form-group col-md-6">
       <label class="form-label" for="lastupdate"><b>Ultima modificación: </b></label>

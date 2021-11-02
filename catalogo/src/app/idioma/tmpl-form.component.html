@@ -2,14 +2,14 @@
 <form #miForm="ngForm">
   <div class="form-row">
     <div class="form-group col-md-2">
-      <label class="form-label" for="languageId"><b>ID Idioma: </b></label>
-      <input class="form-control"[class.is-invalid]="languageId.invalid && miForm.dirty" type="number"name="languageId" id="languageId" [(ngModel)]="VM.Elemento.languageId" #languageId="ngModel" required min="0"/>
-      <output class="invalid-feedback" [myShowErrors]="languageId.errors"></output>
+      <label class="form-label" for="id"><b>ID Idioma: </b></label>
+      <input class="form-control"[class.is-invalid]="id.invalid && miForm.dirty" type="number"name="id" id="id" [(ngModel)]="VM.Elemento.id" #id="ngModel" required min="0"/>
+      <output class="invalid-feedback" [myShowErrors]="id.errors"></output>
     </div>
     <div class="form-group col-md-4">
-      <label class="form-label" for="name"><b>Idioma: </b></label>
-      <input class="form-control" [class.is-invalid]="name.invalid" type="text" name="name" id="name" [(ngModel)]="VM.Elemento.name" #name="ngModel" required minlength="2" maxlength="50"/>
-      <output class="invalid-feedback" [myShowErrors]="name.errors"></output>
+      <label class="form-label" for="idioma"><b>Idioma: </b></label>
+      <input class="form-control" [class.is-invalid]="idioma.invalid" type="text" name="idioma" id="idioma" [(ngModel)]="VM.Elemento.idioma" #idioma="ngModel" required minlength="2" maxlength="50"/>
+      <output class="invalid-feedback" [myShowErrors]="idioma.errors"></output>
     </div>
     <div class="form-group col-md-2">
       <label class="form-label" for="lastupdate"><b>Ultima modificacion: </b></label>

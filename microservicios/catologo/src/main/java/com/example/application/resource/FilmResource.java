@@ -96,13 +96,13 @@ public class FilmResource {
 		item.getFilmActors().forEach(idactor->newItem.addFilmActor(new Actor(idactor)));
 		item.getFilmCategories().forEach(idcategoria->newItem.addFilmCategory(new Category(idcategoria)));
 		srv.modify(newItem);
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{filmId}")
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
 			.buildAndExpand(newItem.getFilmId()).toUri();
 		return ResponseEntity.created(location).build();
 
 	}
 
-	@PutMapping("/{filmId}")
+	@PutMapping("/{id}")
 	//@ResponseStatus(HttpStatus.NO_CONTENT)
 	public FilmDTO update(@PathVariable int id, @Valid @RequestBody FilmDTO item) throws BadRequestException, NotFoundException, InvalidDataException {
 		if(item == null)
@@ -112,7 +112,7 @@ public class FilmResource {
 		return FilmDTO.from(srv.modify(FilmDTO.from(item)));	
 	}
 
-	@DeleteMapping("/{filmId}")
+	@DeleteMapping("/{id}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void delete(@PathVariable int id) {
 		srv.deleteById(id);

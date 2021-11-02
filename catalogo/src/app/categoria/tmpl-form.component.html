@@ -2,14 +2,14 @@
 <form #miForm="ngForm">
   <div class="form-row">
     <div class="form-group col-md-2">
-      <label class="form-label" for="categoryId"><b>ID Categoria: </b></label>
-      <input class="form-control"[class.is-invalid]="categoryId.invalid && miForm.dirty" type="number"name="categoryId" id="categoryId" [(ngModel)]="VM.Elemento.categoryId" #categoryId="ngModel" required min="0"/>
-      <output class="invalid-feedback" [myShowErrors]="categoryId.errors"></output>
+      <label class="form-label" for="id"><b>ID Categoria: </b></label>
+      <input class="form-control"[class.is-invalid]="id.invalid && miForm.dirty" type="number"name="id" id="id" [(ngModel)]="VM.Elemento.id" #id="ngModel" required min="0"/>
+      <output class="invalid-feedback" [myShowErrors]="id.errors"></output>
     </div>
     <div class="form-group col-md-4">
-      <label class="form-label" for="name"><b>Categoria: </b></label>
-      <input class="form-control" [class.is-invalid]="name.invalid" type="text" name="name" id="name" [(ngModel)]="VM.Elemento.name" #name="ngModel" required minlength="2" maxlength="50"/>
-      <output class="invalid-feedback" [myShowErrors]="name.errors"></output>
+      <label class="form-label" for="categoria"><b>Categoria: </b></label>
+      <input class="form-control" [class.is-invalid]="categoria.invalid" type="text" name="categoria" id="categoria" [(ngModel)]="VM.Elemento.categoria" #categoria="ngModel" required minlength="2" maxlength="50"/>
+      <output class="invalid-feedback" [myShowErrors]="categoria.errors"></output>
     </div>
     <div class="form-group col-md-2">
       <label class="form-label" for="lastupdate"><b>Ultima modificacion: </b></label>

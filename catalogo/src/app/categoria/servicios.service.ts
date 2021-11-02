@@ -13,7 +13,7 @@ import { AuthService, AUTH_REQUIRED } from '../security';
 })
 export class CategoriaDAOService extends RESTDAOService<any, any> {
   constructor(http: HttpClient) {
-    super(http, 'categoria', {
+    super(http, 'categorias', {
       context: new HttpContext().set(AUTH_REQUIRED, true),
     });
   }
@@ -27,7 +27,7 @@ export class CategoriaViewModelService {
   protected listado: Array<any> = [];
   protected elemento: any = {};
   protected idOriginal: any = null;
-  protected listURL = '/categoria';
+  protected listURL = '/categorias';
 
   constructor(
     protected notify: NotificationService,

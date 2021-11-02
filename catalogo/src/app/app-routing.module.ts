@@ -16,21 +16,21 @@ const routes: Routes = [
     { path: ':id', component: PeliculasViewComponent },
     { path: ':id/:kk', component: PeliculasViewComponent },
   ]},
-  { path: 'actor', children: [
+  { path: 'actores', children: [
     { path: '', component: ActorListComponent },
     { path: 'add', component: ActorAddComponent },
     { path: ':id/edit', component: ActorEditComponent },
     { path: ':id', component: ActorViewComponent },
     { path: ':id/:kk', component: ActorViewComponent },
   ]},
-  { path: 'categoria', children: [
+  { path: 'categorias', children: [
     { path: '', component: CategoriaListComponent },
     { path: 'add', component: CategoriaAddComponent },
     { path: ':id/edit', component: CategoriaEditComponent },
     { path: ':id', component: CategoriaViewComponent },
     { path: ':id/:kk', component: CategoriaViewComponent },
   ]},
-  { path: 'idioma', children: [
+  { path: 'idiomas', children: [
     { path: '', component: IdiomaListComponent },
     { path: 'add', component: IdiomaAddComponent },
     { path: ':id/edit', component: IdiomaEditComponent },

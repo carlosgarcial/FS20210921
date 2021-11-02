@@ -13,7 +13,7 @@ import { AuthService, AUTH_REQUIRED } from '../security';
 })
 export class ActorDAOService extends RESTDAOService<any, any> {
   constructor(http: HttpClient) {
-    super(http, 'actor', {
+    super(http, 'actores', {
       context: new HttpContext().set(AUTH_REQUIRED, true),
     });
   }
@@ -27,7 +27,7 @@ export class ActorViewModelService {
   protected listado: Array<any> = [];
   protected elemento: any = {};
   protected idOriginal: any = null;
-  protected listURL = '/actor';
+  protected listURL = '/actores';
 
   constructor(
     protected notify: NotificationService,

@@ -13,7 +13,7 @@ import { AuthService, AUTH_REQUIRED } from '../security';
 })
 export class IdiomaDAOService extends RESTDAOService<any, any> {
   constructor(http: HttpClient) {
-    super(http, 'idioma', {
+    super(http, 'idiomas', {
       context: new HttpContext().set(AUTH_REQUIRED, true),
     });
   }
@@ -27,7 +27,7 @@ export class IdiomaViewModelService {
   protected listado: Array<any> = [];
   protected elemento: any = {};
   protected idOriginal: any = null;
-  protected listURL = '/idioma';
+  protected listURL = '/idiomas';
 
   constructor(
     protected notify: NotificationService,
